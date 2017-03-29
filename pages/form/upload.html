@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>upload 上传</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.cover-area {
+			    width: 500px;
+			    max-width: 100%;
+			    background-color: white;
+			    border: 1px solid lightGrey;
+			    border-radius: 4px;
+			    position: relative;
+			}
+			
+			.cover-hd {
+			    padding: 2px 8px 3px;
+			    position: relative;
+			}
+			
+			.inline {
+			    display: inline-block !important;
+			}
+			
+			.upload-tip {
+			    font-size: 12px;
+			    line-height: 28px;
+			    text-align: right;
+			    position: absolute;
+			    top: 3px;
+			    right: 8px;
+			}
+			
+			.cover-bd {
+			    border-top: 1px solid #CCC;
+			    font-size: 0;
+			    overflow: hidden;
+			    padding: 8px;
+			}
+			
+			.upload-delete-btn {
+			    background-image: url(../../assets/images/icon_remove.png);
+			    position: absolute;
+			    top: 2px;
+			    right: 5px;
+			    height: 20px;
+			    width: 20px;
+			    cursor: pointer;
+			    z-index: 1000;
+			}
+			
+			.panel {
+				margin-top: 10px;
+			}
+			
+			.multiple .thumbnail {
+				width: 120px;
+				height: 120px;
+			}
+			
+			.multiple .thumbnail img {
+				width: 110px;
+				height: 110px;
+			}
+			
+			.uploader-list {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			.file-item {
+				float: left;
+				position: relative;
+				margin: 0 20px 20px 0;
+				padding: 4px;
+			}
+			
+			.file-item .error {
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				right: 4px;
+				background: red;
+				color: white;
+				text-align: center;
+				height: 20px;
+				font-size: 14px;
+				line-height: 23px;
+			}
+			
+			.file-item .info {
+				position: absolute;
+				left: 4px;
+				bottom: 4px;
+				right: 4px;
+				height: 20px;
+				line-height: 20px;
+				text-indent: 5px;
+				background: rgba(0, 0, 0, 0.6);
+				color: white;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				font-size: 12px;
+				z-index: 10;
+			}
+			
+			div.file-panel {
+			    position: absolute;
+			    height: 0px;
+			    background: rgba(0, 0, 0, 0.2);
+			    filter: alpha(opacity = 50);
+			    -moz-opacity: 0.5;
+			    -khtml-opacity: 0.5;
+			    opacity: 0.5;
+			    width: 100%;
+			    top: 0;
+			    left: 0;
+			    overflow: hidden;
+			    z-index: 300;
+			}
+			
+			div.file-panel span {
+			    width: 24px;
+			    height: 24px;
+			    display: inline;
+			    float: right;
+			    text-indent: -9999px;
+			    overflow: hidden;
+			    background: url(../../assets/images/icons.png) no-repeat;
+			    margin: 5px 1px 1px;
+			    cursor: pointer;
+			}
+			
+			.uploader-list div.file-panel span.cancel {
+				background-position: -48px -24px;
+			}
+			
+			.uploader-list div.file-panel span.cancel:hover {
+				background-position: -48px 0;
+			}
+			
+			.file-item.thumbnail:hover .file-panel{
+				height: 30px;
+			}
+			
+			p.imgWrap {
+				position: relative;
+				z-index: 2;
+				vertical-align: middle;
+				overflow: hidden;
+				height: 110px;
+				width: 110px;
+				-webkit-transform-origin: 50% 50%;
+				-moz-transform-origin: 50% 50%;
+				-o-transform-origin: 50% 50%;
+				-ms-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				-webit-transition: 200ms ease-out;
+				-moz-transition: 200ms ease-out;
+				-o-transition: 200ms ease-out;
+				-ms-transition: 200ms ease-out;
+				transition: 200ms ease-out;
+			}
+			
+			/*****************************************************************/
+			.demo-upload-list {
+			    display: inline-block;
+			    width: 60px;
+			    height: 60px;
+			    text-align: center;
+			    line-height: 60px;
+			    border: 1px solid transparent;
+			    border-radius: 4px;
+			    overflow: hidden;
+			    background: #fff;
+			    position: relative;
+			    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+			    margin-right: 4px;
+			}
+			
+			.demo-upload-list img {
+			    width: 100%;
+			    height: 100%;
+			}
+			
+			.demo-upload-list-cover {
+			    display: none;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    background: rgba(0,0,0,.6);
+			}
+			
+			.demo-upload-list:hover .demo-upload-list-cover {
+			    display: block;
+			}
+			
+			.demo-upload-list-cover i {
+			    color: #fff;
+			    font-size: 10px;
+			    cursor: pointer;
+			    margin: 0 2px;
+			}
+
+			.upload-add-panel {
+				display: inline-block;
+    			width: 58px;
+			}
+			
+			.upload-add-panel .upload-drag {
+			    background: #fff;
+			    border: 1px dashed #d7dde4;
+			    border-radius: 4px;
+			    text-align: center;
+			    cursor: pointer;
+			    position: relative;
+			    overflow: hidden;
+			    transition: border-color .2s ease;
+			}
+			
+			.upload-add-panel .upload-drag:hover {
+			    border: 1px dashed #39f;
+			}
+	    </style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<p class="lead">样式一(上传按钮)</p>
+	            	<div class="panel panel-default">
+						<div class="panel-body code">
+							<button class="btn btn-info"><i class="glyphicon glyphicon-cloud-upload"></i>文件上传</button>
+						</div>
+	            	</div>
+	            	<p class="lead">样式二(单图上传带预览)</p>
+	            	<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="cover-area">
+		                        <div class="cover-hd">
+		                            <div class="inline">
+		                                <div id="upload-button" class="btn btn-default">
+											选择图片
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <p class="upload-tip">（最佳尺寸：宽720px 高400px）</p>
+	                            <div id="upload-preview" class="img-area cover-bd imgfile" style="position:relative;">
+	                            	<div class="s1" style="width:160px; height:120px;position:relative;">
+									   	<img src="../../assets/images/Test/adam-jansen.jpg" style="width: 160px; height: 120px;">
+									   	<div class="upload-delete-btn" title="删除"></div>
+									</div>
+	                            </div>
+		                    </div>
+						</div>
+	            	</div>
+	            	<p class="lead">样式三(多图或单图兼容上传)</p>
+	            	<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="cover-area multiple">
+		                        <div class="cover-hd">
+		                            <div class="inline">
+		                                <div id="upload-button" class="btn btn-default">选择图片</div>
+		                            </div>
+		                        </div>
+		                        <p class="upload-tip">（最佳尺寸：宽720px 高400px）</p>
+	                            <div class="img-area cover-bd imgfile uploader-list" id="multiple-img-preview"><div data-id="248_0" class="file-item thumbnail" data-is-new="false">
+								   	<div class="file-panel"><span class="cancel">删除</span></div>
+									   	<p class="imgWrap">
+									       	<img src="../../assets/images/Test/adam-jansen.jpg">
+									   	</p>
+									   	<div class="info">248.jpg</div>
+									</div>
+									<div data-id="30_1" class="file-item thumbnail" data-is-new="false">
+								   		<div class="file-panel"><span class="cancel">删除</span></div>
+									   	<p class="imgWrap">
+									       	<img src="../../assets/images/Test/adam-jansen.jpg">
+									   	</p>
+								   		<div class="info">30.jpg</div>
+									</div>
+	                            </div>
+		                    </div>
+						</div>
+	            	</div>
+	            	<p class="lead">样式四(多图上传)</p>
+	            	<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="upload-list-panle">
+								<div class="demo-upload-list">
+									<img src="../../assets/images/Test/adam-jansen.jpg">
+									<div class="demo-upload-list-cover"> 
+										<i class="glyphicon glyphicon-eye-open"></i>
+										<i class="glyphicon glyphicon-trash"></i>
+									</div>
+								</div>
+								<div class="demo-upload-list">
+									<img src="../../assets/images/Test/adam-jansen.jpg">
+									<div class="demo-upload-list-cover"> 
+										<i class="glyphicon glyphicon-eye-open"></i>
+										<i class="glyphicon glyphicon-trash"></i>
+									</div>
+								</div>
+								<div class="upload-add-panel">
+								    <div class="upload-drag">
+								        <div style="width: 58px;height:58px;line-height: 58px"> 
+								        	<i class="glyphicon glyphicon-camera" style="font-size: 20px;"></i>
+								        </div>
+								    </div>
+								</div>
+							</div>
+						</div>
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

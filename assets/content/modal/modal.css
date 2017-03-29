@@ -1,0 +1,146 @@
+﻿@charset "utf-8";
+/*
+ * bootbox 对话框弹出框样式
+ */
+.modal-header {
+	border-bottom: 1px solid #dae3eb;
+	background-color: #eff3f8;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 7px 15px;
+	height: 40px;
+}
+
+.modal .close, .modal .min {
+	font-size: 30px;
+	margin-top: -3px;
+	opacity: .3;
+	filter: alpha(opacity = 30);
+}
+
+.bootbox-close-button.close {
+	margin-left: 8px;
+}
+
+button.min {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.min {
+	float: right;
+  	font-size: 21px;
+  	font-weight: bold;
+  	line-height: 1;
+  	color: #000;
+  	text-shadow: 0 1px 0 #fff;
+  	filter: alpha(opacity=20);
+  	opacity: .2;
+}
+
+.modal .close:hover,.modal .close:focus {
+	opacity: .5;
+	filter: alpha(opacity = 50);
+}
+
+.modal-body {
+	min-height: 120px;
+	overflow: auto !important;
+}
+
+.modal-body .close {
+	margin: -13px -10px 0 10px;
+}
+
+.modal-footer {
+	margin-top: 0;
+	/*padding-top: 12px;
+    padding-bottom: 14px;*/
+	border-top: 1px solid #e0e0e0;
+	background-color: #eff3f8;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	text-align: center;
+	padding: 8px 5px 8px 5px;
+}
+
+.modal-footer .btn {
+	min-width: 60px;
+	margin-right: 5px;
+}
+
+.modal-overflow {
+	top: 1% !important;
+	height: 98% !important;
+}
+
+.modal-overflow>.modal-body,.modal-frame>.modal-body {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	overflow: auto !important;
+}
+
+.modal-overflow>.modal-header+.modal-body,.modal-frame>.modal-header+.modal-body {
+	top: 40px;
+}
+
+/*.modal-body是倒数第二个元素，也就是下面还有.madal-footer时，设置bottom，为modal-footer留出空间*/
+.modal-overflow>.modal-body:nth-last-child(2),.modal-frame>.modal-body:nth-last-child(2) {
+	bottom: 52px;
+}
+
+.modal-overflow>.modal-footer,.modal-frame>.modal-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 51px;
+}
+
+.modal-overflow-x {
+	right: 1%;
+	left: 1%;
+	margin-left: 0 !important;
+}
+
+.modal-open.page-overflow {
+	overflow: hidden;
+	padding-right: 17px;
+}
+
+.bootbox-alert .modal-body,.bootbox-confirm .modal-body {
+	font-size: 16px;
+}
+
+/************* 提示信息背景色 ****************/
+.bootbox-success{
+    color: #3c763d;
+    background-color: #dff0d8 !important;
+}
+
+.bootbox-warning{
+  color: #8a6d3b;
+  background-color: #fcf8e3 !important;
+}
+
+.bootbox-error{
+  color: #a94442;
+  background-color: #f2dede !important;
+}
+
+.bootbox-info {
+  color: #31708f;
+  background-color: #d9edf7 !important;
+}
+
+.close-title {
+    text-align: right !important;
+}
+
+.modal-describe {
+	font-size: 120%;
+}

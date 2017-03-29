@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>datetimepicker 日期时间选择</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>datetimepicker 日期时间选择</h2>
+					</div>
+					<p class="lead">概述</p>
+					<p>daterangepicker 日期时间选择使用的是基于bootstrap的bootstrap-daterangepicker第三方插件做的封装。本站点封装了本地化语言、默认选择器处理。</p>
+					<p>其官方地址是：<a href="http://www.daterangepicker.com/" target="_blank">http://www.daterangepicker.com/</a></p>
+					<p>demo地址是：<a href="http://www.daterangepicker.com/#examples" target="_blank">http://www.daterangepicker.com/#examples</a></p>
+					<p>github地址是：<a href="https://github.com/dangrossman/bootstrap-daterangepicker" target="_blank">https://github.com/dangrossman/bootstrap-daterangepicker</a></p>
+	            	<div class="page-header">
+						<h4>基础用法</h4>
+					</div>
+					<p>以「日」为基本单位，基础的日期选择控件，本站点封装的组件默认是带上"daterangepicker"的样式。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr" type="text" value="" />
+		            	</div>
+		            	<div class="meta" data-height="200">
+		            		<div class="description">
+		            			<p>引入"site-flatpickr"插件即可。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control daterange-picker&quot; type=&quot;text&quot; value=&quot;&quot; /&gt;
+&lt;script&gt;
+	define([&quot;site-datetime&quot;], function (siteDatetime) {}
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

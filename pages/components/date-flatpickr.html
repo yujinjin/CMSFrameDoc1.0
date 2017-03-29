@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>date flatpickr日期选择</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>datetimepicker 日期时间选择</h2>
+					</div>
+					<p class="lead">概述</p>
+					<p>flatpickr日期时间选择器支持移动手机，提供多种内置的主题效果，并且提供对中文的支持。本站点封装了本地化语言、默认配置设置、默认选择器处理。</p>
+					<p>其官方地址是：<a href="https://chmln.github.io/flatpickr" target="_blank">https://chmln.github.io/flatpickr</a></p>
+					<p>demo地址是：<a href="https://chmln.github.io/flatpickr/examples/" target="_blank">https://chmln.github.io/flatpickr/examples/</a></p>
+					<p>github地址是：<a href="https://github.com/chmln/flatpickr" target="_blank">https://github.com/chmln/flatpickr</a></p>
+	            	<div class="page-header">
+						<h4>基础用法</h4>
+					</div>
+					<p>以「日」为基本单位，基础的日期选择控件，本站点封装的组件默认是带上"date-flatpickr"的样式。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="" />
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>引入"site-flatpickr"插件即可。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; /&gt;
+&lt;script&gt;
+	define([&quot;site-flatpickr&quot;], function () {}
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>日历中显示周</h4>
+					</div>
+					<p>在日历中显示星期数。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="" data-week-numbers="true"/>
+		            		<!--<div class="row demo-date-picker">
+		            			<div class="col-sm-3 text-center">
+		            				<span class="demonstration">周</span>
+		            				<input class="form-control date-flatpickr" type="text" value="" data-shorthand-current-month="false"/>
+		            			</div>
+		            		</div>-->
+		            	</div>
+		            	<div class="meta" data-height="90">
+		            		<div class="description">
+		            			<p>设置属性<code>data-week-numbers</code>为true</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; data-week-numbers=&quot;true&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>设置日期、小时、分</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="" data-enable-time="true" data-date-format="Y-m-d H:i"/>
+		            	</div>
+		            	<div class="meta" data-height="90">
+		            		<div class="description">
+		            			<p>设置属性<code>data-enable-time</code>为true,同时也要设置日期格式<code>Y-m-d H:i</code></p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; data-enable-time=&quot;true&quot; data-date-format=&quot;Y-m-d H:i&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>设置日期、小时、分、秒</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="" data-enable-seconds="true" data-enable-time="true" data-date-format="Y-m-d H:i:S"/>
+		            	</div>
+		            	<div class="meta" data-height="100">
+		            		<div class="description">
+		            			<p>设置属性<code>data-enable-time</code>为true、设置属性<code>data-enable-seconds</code>为true、设置日期格式<code>Y-m-d H:i:S</code></p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; data-enable-seconds=&quot;true&quot; data-enable-time=&quot;true&quot; data-date-format=&quot;Y-m-d H:i:S&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>不允许输入</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="" data-allow-input="false"/>
+		            	</div>
+		            	<div class="meta" data-height="100">
+		            		<div class="description">
+		            			<p>设置属性<code>data-allow-input</code>false</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; data-allow-input=&quot;false&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>默认值</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-small" type="text" value="2017-04-23"/>
+		            	</div>
+		            	<div class="meta" data-height="100">
+		            		<div class="description">
+		            			<p>设置<code>value</code>的值，或者通过设置<code>data-default-date</code>值。</p>
+		            			<p>注意：如果设置值是string类型的，必须和dateFormat相匹配</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-small&quot; type=&quot;text&quot; value=&quot;&quot; data-allow-input=&quot;false&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>日期限制</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="row demo-date-picker">
+		            			<div class="col-sm-3 text-center">
+		            				<span class="demonstration">最小日期</span>
+		            				<input class="form-control date-flatpickr" type="text" value="" data-min-date="2018-02-02"/>
+		            			</div>
+		            			<div class="col-sm-3 text-center">
+		            				<span class="demonstration">最大日期</span>
+		            				<input class="form-control date-flatpickr" type="text" value="" data-max-date="2017-02-02"/>
+		            			</div>
+		            			<div class="col-sm-3 text-center">
+		            				<span class="demonstration">可以使用的日期</span>
+		            				<input class="form-control" id="enableFltpickr" type="text" value=""/>
+		            			</div>
+		            			<div class="col-sm-3 text-center">
+		            				<span class="demonstration">禁用日期</span>
+		            				<input class="form-control" id="disableFltpickr" type="text" value=""/>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	<div class="meta" data-height="440">
+		            		<div class="description">
+		            			<p>最小日期设置属性<code>data-min-date</code>的值。</p>
+		            			<p>最大日期设置属性<code>data-max-date</code>的值。</p>
+		            			<p>可以使用的日期通过配置项：enable，它是一个数组，可以设置日期值：<code>["2017-03-30", "2017-05-21", "2017-06-08", new Date(2017, 8, 9) ]</code>、可以设置日期范围：<code>[{from: "2017-04-01",to: "2017-06-01"},{from: "2017-09-01",to: "2017-12-01"}]</code>、可以设置回调函数(返回true就启用):<code>[function(date) {return (date.getMonth() % 2 === 0 && date.getDate() < 15);}]</code></p>
+		            			<p>禁用日期通过配置项：disable，它的值同enable一样。</p>
+		            			<p>注意：如果设置日期值是string类型的，必须和dateFormat相匹配。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr&quot; type=&quot;text&quot; value=&quot;&quot; data-min-date=&quot;2018-02-02&quot;/&gt;
+&lt;input class=&quot;form-control date-flatpickr&quot; type=&quot;text&quot; value=&quot;&quot; data-max-date=&quot;2017-02-02&quot;/&gt;
+&lt;input class=&quot;form-control&quot; id=&quot;enableFltpickr&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+&lt;input class=&quot;form-control&quot; id=&quot;disableFltpickr&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+&lt;script&gt;
+	define([&quot;site-flatpickr&quot;], function (siteFlatpickr) {
+		siteFlatpickr(&quot;#enableFltpickr&quot;, {enable: [&quot;2017-03-02&quot;, &quot;2017-03-02&quot;, &quot;2017-03-05&quot;, &quot;2017-03-08&quot;, &quot;2017-03-09&quot;, new Date()]});
+		siteFlatpickr(&quot;#disableFltpickr&quot;, {disable: [&quot;2017-03-02&quot;, &quot;2017-03-02&quot;, &quot;2017-03-05&quot;, &quot;2017-03-08&quot;, &quot;2017-03-09&quot;, new Date()]});
+	}
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>日期多选</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<input class="form-control date-flatpickr w-large" type="text" data-enable-time="true" data-mode="multiple" data-date-format="Y-m-d H:i"/>
+		            	</div>
+		            	<div class="meta" data-height="100">
+		            		<div class="description">
+		            			<p>设置<code>mode</code>的值为"multiple"。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr w-large&quot; type=&quot;text&quot; data-enable-time=&quot;true&quot; data-mode=&quot;multiple&quot; data-date-format=&quot;Y-m-d H:i&quot;/&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>日期范围选择</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="row demo-date-picker">
+		            			<div class="col-sm-6 text-center">
+		            				<span class="demonstration">普通</span>
+		            				<input class="form-control date-flatpickr" type="text" data-enable-time="true" data-mode="range" data-date-format="Y-m-d H:i"/>
+		            			</div>
+		            			<div class="col-sm-6 text-center">
+		            				<span class="demonstration">设置选择范围</span>
+		            				<input class="form-control" id="rangeFltpickr" type="text" value=""/>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	<div class="meta" data-height="400">
+		            		<div class="description">
+		            			<p>设置<code>mode</code>的值为"range"。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;input class=&quot;form-control date-flatpickr&quot; type=&quot;text&quot; data-enable-time=&quot;true&quot; data-mode=&quot;range&quot; data-date-format=&quot;Y-m-d H:i&quot;/&gt;
+&lt;input class=&quot;form-control&quot; id=&quot;rangeFltpickr&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+&lt;script&gt;
+define([&quot;site-flatpickr&quot;, &quot;docs&quot;], function (siteFlatpickr) {
+	siteFlatpickr(&quot;#rangeFltpickr&quot;, {
+		mode: &quot;range&quot;,
+		minDate: &quot;today&quot;,
+		disable: [
+			function(date) {
+				// disable every multiple of 8
+				return !(date.getDate() % 8);
+			}
+		]
+	});
+});
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>Options</h4>
+					</div>
+					<p>下面是常用的table配置参数，如果还需要更多请查看jquery.datatables的官方文档。</p>
+					<table class="table table-bordered">
+						<thead>
+        					<tr>
+          						<th>序号</th>
+				          		<th>参数</th>
+				          		<th>说明</th>
+				          		<th>类型</th>
+				          		<th>可选值</th>
+				          		<th>默认值</th>
+				        	</tr>
+				      	</thead>
+				      	<tbody>
+				      		<tr>
+				      			<th scope="row">1</th>
+				      			<td>mode</td>
+				      			<td>日期显示模式，"single"，  "multiple"或 "range"三个选项</td>
+				      			<td>string</td>
+				      			<td>single|multiple|range</td>
+				      			<td>single</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">2</th>
+				      			<td>position</td>
+				      			<td>日期选择器显示的位置</td>
+				      			<td>string</td>
+				      			<td>top</td>
+				      			<td>top</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">3</th>
+				      			<td>utc</td>
+				      			<td>日期将会被解析、格式化和显示为UTC格式。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">4</th>
+				      			<td>wrap</td>
+				      			<td>包裹元素。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">5</th>
+				      			<td>weekNumbers</td>
+				      			<td>是否在日历中显示星期数。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">6</th>
+				      			<td>allowInput</td>
+				      			<td>是否允许用户直接在输入框中输入日期。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">7</th>
+				      			<td>clickOpens</td>
+				      			<td>是否在点击输入框时打开日期时间选择界面。如果你想通过手动.open()方法来打开，该选项设置为false。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">8</th>
+				      			<td>time_24hr</td>
+				      			<td>是否以24小时格式来显示时间。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">9</th>
+				      			<td>enableTime</td>
+				      			<td>是否启用时间选择。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">10</th>
+				      			<td>noCalendar</td>
+				      			<td>是否隐藏日历。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">11</th>
+				      			<td>dateFormat</td>
+				      			<td>设置日期显示格式。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>Y-m-d</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">12</th>
+				      			<td>altInput</td>
+				      			<td>是否使用某种用户友好的方式来显示日期时间。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">13</th>
+				      			<td>altInputClass</td>
+				      			<td>添加到input上的自定义class类。例如bootstrap用户可能需要添加一个form-control class。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>flatpickr-input form-control input</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">14</th>
+				      			<td>altFormat</td>
+				      			<td>altInput的日期格式。例如： June 10, 2016</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>F j, Y</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">14</th>
+				      			<td>altFormat</td>
+				      			<td>altInput的日期格式。例如： June 10, 2016</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>F j, Y</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">15</th>
+				      			<td>minDate</td>
+				      			<td>用户可以选择的最小日期。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">16</th>
+				      			<td>maxDate</td>
+				      			<td>用户可以选择的最大日期。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">17</th>
+				      			<td>parseDate</td>
+				      			<td>接收一个日期字符串并返回一个日期对象。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">18</th>
+				      			<td>formatDate</td>
+				      			<td></td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">19</th>
+				      			<td>getWeek</td>
+				      			<td></td>
+				      			<td>function</td>
+				      			<td>-</td>
+				      			<td></td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">19</th>
+				      			<td>getWeek</td>
+				      			<td>获取周的回调函数</td>
+				      			<td>function</td>
+				      			<td>-</td>
+				      			<td></td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">20</th>
+				      			<td>enable</td>
+				      			<td>可以使用的日期</td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">21</th>
+				      			<td>disable</td>
+				      			<td>被禁用的日期。</td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">22</th>
+				      			<td>shorthandCurrentMonth</td>
+				      			<td>以简写方式显示月份。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">23</th>
+				      			<td>inline</td>
+				      			<td>是否以内联的方式显示日历。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">24</th>
+				      			<td>static</td>
+				      			<td>日期选择器位于包裹容器的位置。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">25</th>
+				      			<td>appendTo</td>
+				      			<td>日期选择器添加到指定的节点</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">26</th>
+				      			<td>prevArrow</td>
+				      			<td>向前箭头图标。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>..</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">27</th>
+				      			<td>nextArrow</td>
+				      			<td>向后箭头图标。</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>..</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">28</th>
+				      			<td>enableSeconds</td>
+				      			<td>在时间选择器中是否可以选择秒。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">29</th>
+				      			<td>hourIncrement</td>
+				      			<td>小时输入框的步长。</td>
+				      			<td>number</td>
+				      			<td>-</td>
+				      			<td>1</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">30</th>
+				      			<td>minuteIncrement</td>
+				      			<td>分钟输入框的步长。</td>
+				      			<td>number</td>
+				      			<td>-</td>
+				      			<td>5</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">31</th>
+				      			<td>defaultHour</td>
+				      			<td></td>
+				      			<td>number</td>
+				      			<td>-</td>
+				      			<td>12</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">32</th>
+				      			<td>defaultMinute</td>
+				      			<td></td>
+				      			<td>number</td>
+				      			<td>-</td>
+				      			<td>0</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">33</th>
+				      			<td>disableMobile</td>
+				      			<td></td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">34</th>
+				      			<td>disableMobile</td>
+				      			<td>设置  disableMobile 为true以始终使用非本地选择器。默认情况下，Flatpickr使用本机datetime小部件，除非使用某些选项（例如禁用）。</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">35</th>
+				      			<td>locale</td>
+				      			<td>本地语言</td>
+				      			<td>string</td>
+				      			<td>-</td>
+				      			<td>default</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">36</th>
+				      			<td>plugins</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">37</th>
+				      			<td>onClose</td>
+				      			<td>每次日历被关闭时都会触发该函数。 function (dateObj, dateStr) {}</td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">38</th>
+				      			<td>onChange</td>
+				      			<td>每次日期被选择的时候都触发该函数。 function (dateObj, dateStr) {}</td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">39</th>
+				      			<td>onDayCreate</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">40</th>
+				      			<td>onMonthChange</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">41</th>
+				      			<td>onOpen</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">42</th>
+				      			<td>onParseConfig</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">43</th>
+				      			<td>onReady</td>
+				      			<td>当日历准备就绪时触发的功能。 function (dateObj, dateStr) {}</td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">44</th>
+				      			<td>onValueUpdate</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">45</th>
+				      			<td>onYearChange</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">46</th>
+				      			<td>onKeyDown</td>
+				      			<td></td>
+				      			<td>array</td>
+				      			<td>-</td>
+				      			<td>[]</td>
+				      		</tr>
+				      	</tbody>
+				   	</table>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

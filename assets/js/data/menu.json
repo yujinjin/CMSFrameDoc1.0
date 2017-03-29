@@ -1,0 +1,135 @@
+{
+	"success": true,
+    "error": null,
+    "result": [{
+	    "id": "001",
+		"name":"基础",
+		"icon": "glyphicon glyphicon-globe",
+		"items": [{
+			"id": "00101",
+			"name":"按钮",
+			"icon": "glyphicon glyphicon-bell",
+			"url":"/pages/base/button.html"
+		},{
+			"id": "00102",
+			"name":"栅格",
+			"icon": "glyphicon glyphicon-th-large",
+			"url":"/pages/base/grid.html"
+		},{
+			"id": "00103",
+			"name":"图标",
+			"icon": "glyphicon glyphicon-list-alt",
+			"url":"/pages/base/icon.html"
+		}]
+	},{
+		"id": "002",
+		"name":"form表单 ",
+		"icon": "glyphicon glyphicon-tree-conifer",
+		"items":[{
+		    "id": "00201",
+		    "name": "input 输入框",
+		    "url": "/pages/form/input.html",
+		    "icon": "glyphicon glyphicon-chevron-right"
+		},{
+		    "id": "00202",
+		    "name": "Radio 单选框",
+		    "url": "/pages/form/radio.html",
+		    "icon": "glyphicon glyphicon-picture"
+		},{
+		    "id": "00203",
+		    "name": "checkbox 多选框",
+		    "url": "/pages/form/checkbox.html",
+		    "icon": "glyphicon glyphicon-text-size"
+		},{
+		    "id": "00204",
+		    "name": "upload 上传",
+		    "url": "/pages/form/upload.html",
+		    "icon": "glyphicon glyphicon-text-size"
+		},{
+		    "id": "00205",
+		    "name": "form 表单",
+		    "url": "/pages/form/form.html",
+		    "icon": "glyphicon glyphicon-text-size"
+		}]
+	},{
+		"id": "003",
+		"name":"组件",
+		"icon": "glyphicon glyphicon-facetime-video",
+		"items":[{
+		    "id": "00301",
+		    "name": "Alert 警告提示",
+		    "url": "/pages/components/alert.html",
+		    "icon": "glyphicon glyphicon-remove-sign"
+		},{
+		    "id": "00302",
+		    "name": "message 全局提示",
+		    "url": "/pages/components/toastr.html",
+		    "icon": "glyphicon glyphicon-time"
+		},{
+		    "id": "00303",
+		    "name": "table 表格",
+		    "url": "/pages/components/table.html",
+		    "icon": "glyphicon glyphicon-align-justify"
+		},{
+		    "id": "00304",
+		    "name": "select下拉框",
+		    "url": "/pages/components/select.html",
+		    "icon": "glyphicon glyphicon-tasks"
+		},{
+		    "id": "00305",
+		    "name": "date picker日期选择",
+		    "url": "/pages/components/date-picker.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00306",
+		    "name": "date flatpickr日期选择",
+		    "url": "/pages/components/date-flatpickr.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00306",
+		    "name": "表单验证",
+		    "url": "/pages/components/form-validate.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00307",
+		    "name": "富文本框",
+		    "url": "/pages/components/summernote.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00308",
+		    "name": "tree 树",
+		    "url": "/pages/components/tree.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00309",
+		    "name": "modal 对话框",
+		    "url": "/pages/components/modal.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00310",
+		    "name": "search suggest",
+		    "url": "/pages/components/search-suggest.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00311",
+		    "name": "loading 加载",
+		    "url": "/pages/components/loading.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00312",
+		    "name": "单个图上传",
+		    "url": "/pages/components/single-img-upload.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00313",
+		    "name": "多图上传",
+		    "url": "/pages/components/multiple-img-upload.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		},{
+		    "id": "00314",
+		    "name": "二维码",
+		    "url": "/pages/components/qrcode.html",
+		    "icon": "glyphicon glyphicon-map-marker"
+		}]
+	}]
+}

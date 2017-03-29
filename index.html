@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>首页</title>
+		<link href="./assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="./assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="./assets/css/beyond.css" rel="stylesheet" />
+	    <link href="./assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+	    <!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+		<!-- /Navbar -->
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+				<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content"></div>
+	        </div>
+	    </div>
+    	<script src="./assets/Scripts/require-2.2.0.js" data-main="./assets/js/site-config.js"></script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>button 按钮</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <link href="../../assets/css/login.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.panel-body>.btn, .panel-body>.btn-group {
+			    margin-top: 5px;
+			    margin-bottom: 5px;
+			}
+			
+			.show-grid {
+			    margin-bottom: 15px;
+			}
+			
+			.panel-body {
+			    background-color: #f0f0f0;
+			}
+			
+			.panel-body button {
+			    margin: 2px 1px;
+			}
+	    </style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+		<!-- /Navbar -->
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+				<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>样式</h2>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<button type="button" class="btn btn-default">（默认样式）Default</button>
+							<button type="button" class="btn btn-primary">（首选项）Primary</button>
+							<button type="button" class="btn btn-success">（成功）Success</button>
+							<button type="button" class="btn btn-info">（一般信息）Info</button>
+							<button type="button" class="btn btn-warning">（警告）Warning</button>
+							<button type="button" class="btn btn-danger">（危险）Danger</button>
+							<button type="button" class="btn btn-link">（链接）Link</button>
+						</div>
+					</div>
+					<div class="page-header">
+						<h2>尺寸</h2>
+					</div>
+					<div class="show-grid">
+						<span class="label label-primary">大尺寸</span>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<button type="button" class="btn btn-default btn-lg">（默认样式）Default</button>
+							<button type="button" class="btn btn-primary btn-lg">（首选项）Primary</button>
+							<button type="button" class="btn btn-success btn-lg">（成功）Success</button>
+							<button type="button" class="btn btn-info btn-lg">（一般信息）Info</button>
+							<button type="button" class="btn btn-warning btn-lg">（警告）Warning</button>
+							<button type="button" class="btn btn-danger btn-lg">（危险）Danger</button>
+							<button type="button" class="btn btn-link btn-lg">（链接）Link</button>
+						</div>
+					</div>
+					<div class="show-grid">
+						<span class="label label-primary">小尺寸</span>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<button type="button" class="btn btn-default btn-sm">（默认样式）Default</button>
+							<button type="button" class="btn btn-primary btn-sm">（首选项）Primary</button>
+							<button type="button" class="btn btn-success btn-sm">（成功）Success</button>
+							<button type="button" class="btn btn-info btn-sm">（一般信息）Info</button>
+							<button type="button" class="btn btn-warning btn-sm">（警告）Warning</button>
+							<button type="button" class="btn btn-danger btn-sm">（危险）Danger</button>
+							<button type="button" class="btn btn-link btn-sm">（链接）Link</button>
+						</div>
+					</div>
+					<div class="show-grid">
+						<span class="label label-primary">超小尺寸</span>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<button type="button" class="btn btn-default btn-xs">（默认样式）Default</button>
+							<button type="button" class="btn btn-primary btn-xs">（首选项）Primary</button>
+							<button type="button" class="btn btn-success btn-xs">（成功）Success</button>
+							<button type="button" class="btn btn-info btn-xs">（一般信息）Info</button>
+							<button type="button" class="btn btn-warning btn-xs">（警告）Warning</button>
+							<button type="button" class="btn btn-danger btn-xs">（危险）Danger</button>
+							<button type="button" class="btn btn-link btn-xs">（链接）Link</button>
+						</div>
+					</div>
+					<div class="page-header">
+						<h2>常用按钮</h2>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<button id="btnNew" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>新增</button>
+							<button id="btnEdit" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i>编辑</button>
+							<button id="btnDelete" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i>删除</button>
+							<button id="btnSaveDisplayOrder" class="btn btn-default"><i class="fa fa-save"></i>保存排序</button>
+							<button id="btnReload" class="btn btn-default"><i class="fa fa-refresh"></i>刷新</button>
+							<button id="btnOnShelves" status="2" class="btn btn-default"><i class="fa fa-upload"></i>上架</button>
+							<button id="btnOffShelves" status="1" class="btn btn-default"><i class="fa fa-download"></i>下架</button>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

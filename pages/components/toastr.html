@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>Message 全局提示</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>Message 全局提示</h2>
+					</div>
+					<p class="lead">概述</p>
+					<p>Message 全局提示使用的是基于jquery的toastr第三方插件做的封装。可设置消息弹框的位置、类型、关闭事件等参数</p>
+					<p>其官方地址是：<a href="http://codeseven.github.io/toastr/" target="_blank">http://codeseven.github.io/toastr/</a></p>
+					<p>demo地址是：<a href="http://codeseven.github.io/toastr/demo.html" target="_blank">http://codeseven.github.io/toastr/demo.html</a></p>
+					<p>github地址是：<a href="https://github.com/CodeSeven/toastr" target="_blank">https://github.com/CodeSevne/toastr</a></p>
+	            	<div class="page-header">
+						<h4>Message 基础用法</h4>
+					</div>
+					<p>默认是从顶部中间出现，显示的动画0.3s，显示持续1s，消失动画是1s，有关闭按钮的，也可以通过点击消息框关闭(默认)或鼠标mouseout时自动关闭(默认)。</p>
+	            	<p>本框架是作为全局来使用的，因此在本站点内可以直接使用<code>site.toastr</code>来调用 Message</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<button data-index="1" class="btn btn-default">打开消息提示</button>
+		            	</div>
+		            	<div class="meta" data-height="75">
+		            		<div class="description">
+		            			<p>常规消息提示，默认背景为浅蓝色  </p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">site.toastr.info("message 消息提示!");</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>不同的状态</h4>
+					</div>
+					<p>用来显示「成功、警告、消息、错误」类型的消息提示</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<button data-index="2" class="btn btn-default">成功</button>
+		            		<button data-index="3" class="btn btn-default">警告</button>
+		            		<button data-index="4" class="btn btn-default">消息</button>
+		            		<button data-index="5" class="btn btn-default">错误</button>
+		            	</div>
+		            	<div class="meta" data-height="140">
+		            		<div class="description">
+		            			<p>显示四种类型的消息提示，不同的类型适用于不同的消息提示重要性的场景。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs lang-javascript">site.toastr.success("这是一条成功消息提示!");
+site.toastr.warning("这是一条警告消息提示!");
+site.toastr.info("这是一条普通消息提示!");
+site.toastr.error("这是一条错误消息提示!");</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>标题</h4>
+					</div>
+					<p>可以添加标题。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<button data-index="6" class="btn btn-default">显示标题</button>
+		            	</div>
+		            	<div class="meta" data-height="75">
+		            		<div class="description">
+		            			<p>Message的第二个参数代表的消息的标题，如果没有传值就不显示。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-javascript">site.toastr.success("这是一条成功消息提示，有标题哦。", "提示");</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>位置</h4>
+					</div>
+					<p>可以设置消息显示的位置。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<button data-index="7" class="btn btn-default">右上</button>
+		            		<button data-index="8" class="btn btn-default">右下</button>
+		            		<button data-index="9" class="btn btn-default">左下</button>
+		            		<button data-index="10" class="btn btn-default">左上</button>
+		            		<button data-index="11" class="btn btn-default">顶部全宽 </button>
+		            		<button data-index="12" class="btn btn-default">底部全宽</button>
+		            		<button data-index="13" class="btn btn-default">顶部居中</button>
+		            		<button data-index="14" class="btn btn-default">底部居中</button>
+		            	</div>
+		            	<div class="meta" data-height="200">
+		            		<div class="description">
+		            			<p>Message连续显示时，新消息默认是接着上一个消息位置的下面显示的。如果上一条消息的位置是顶部居中且还在显示的状态那么下一条消息不管你怎么设置消息的位置都会跟上一条消息的位置保持一致。</p>
+		            			<p>如果必须要改变当前消息的位置得先把上一条正在显示消息移除(<code>remove</code>)再显示。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-javascript">site.toastr.info("这条消息的位置顶端右边哟", "提示", {"positionClass": "toast-top-right"});
+site.toastr.info("这条消息的位置处于底部右边哟", "提示", {"positionClass": "toast-bottom-right"});
+site.toastr.info("这条消息的位置处于底部左边哟", "提示", {"positionClass": "toast-bottom-left"});
+site.toastr.info("这条消息的位置处于顶部左边哟", "提示", {"positionClass": "toast-top-left"});
+site.toastr.info("这条消息的位置处于顶部宽度覆盖哟", "提示", {"positionClass": "toast-top-full-width"});
+site.toastr.info("这条消息的位置处于底部宽度覆盖哟", "提示", {"positionClass": "toast-bottom-full-width"});
+site.toastr.info("这条消息的位置处于顶部居中哟", "提示", {"positionClass": "toast-top-center"});
+site.toastr.info("这条消息的位置处于底部居中哟", "提示", {"positionClass": "toast-bottom-center"});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>单独引用</h4>
+					</div>
+					<p>单独引入 Message：</p>
+					<div class="demo-block demo-box">
+						<div class="meta" style="height: 75px;">
+							<div class="highlight">
+								<pre>
+									<code class="hljs language-javascript">define(["site-toastr"], function (toastr) {});</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="page-header">
+						<h4>Options</h4>
+					</div>
+					<p>目前给出了比较重要的17个配置参数，如果还需要更多请查看toastr的官方文档。</p>
+					<table class="table table-bordered">
+						<thead>
+        					<tr>
+          						<th>序号</th>
+				          		<th>参数</th>
+				          		<th>说明</th>
+				          		<th>类型</th>
+				          		<th>可选值</th>
+				          		<th>默认值</th>
+				        	</tr>
+				      	</thead>
+				      	<tbody>
+				      		<tr>
+				      			<th scope="row">1</th>
+				      			<td>closeButton</td>
+				      			<td>是否显示关闭图标</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">2</th>
+				      			<td>debug</td>
+				      			<td>是否使用debug模式</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">3</th>
+				      			<td>newestOnTop</td>
+				      			<td>最新出现的消息是否是显示在顶部</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">4</th>
+				      			<td>tapToDismiss</td>
+				      			<td>点击提示框是否隐藏</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">5</th>
+				      			<td>progressBar</td>
+				      			<td>是否显示进度条</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">6</th>
+				      			<td>onclick</td>
+				      			<td>点击插件回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>null</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">7</th>
+				      			<td>positionClass</td>
+				      			<td>弹出窗的位置</td>
+				      			<td>string</td>
+				      			<td>toast-top-center、toast-top-right、toast-bottom-right、</br>toast-bottom-left、toast-top-left、toast-top-full-width、</br>toast-bottom-full-width、toast-bottom-center</td>
+				      			<td>toast-top-center</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">8</th>
+				      			<td>preventDuplicates</td>
+				      			<td>防止消息重复,如果当前显示的信息有重复就不再去显示</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">9</th>
+				      			<td>showDuration</td>
+				      			<td>显示的动画时间(ms)</td>
+				      			<td>number</td>
+				      			<td>—</td>
+				      			<td>300</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">10</th>
+				      			<td>hideDuration</td>
+				      			<td>消失的动画时间(ms)</td>
+				      			<td>number</td>
+				      			<td>—</td>
+				      			<td>1000</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">11</th>
+				      			<td>timeOut</td>
+				      			<td>显示时间(ms)</td>
+				      			<td>number</td>
+				      			<td>—</td>
+				      			<td>1000</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">12</th>
+				      			<td>extendedTimeOut</td>
+				      			<td>手动点击关闭事扩展展示时间(ms)</td>
+				      			<td>number</td>
+				      			<td>—</td>
+				      			<td>1000</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">13</th>
+				      			<td>showEasing</td>
+				      			<td>显示时的动画缓冲方式</td>
+				      			<td>string</td>
+				      			<td>swing|linear</td>
+				      			<td>swing</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">14</th>
+				      			<td>hideEasing</td>
+				      			<td>消失时的动画缓冲方式</td>
+				      			<td>string</td>
+				      			<td>swing|linear</td>
+				      			<td>linear</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">15</th>
+				      			<td>showMethod</td>
+				      			<td>显示时的动画方式</td>
+				      			<td>string</td>
+				      			<td>fadeIn|slideDown</td>
+				      			<td>fadeIn</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">16</th>
+				      			<td>hideMethod</td>
+				      			<td>消失时的动画方式</td>
+				      			<td>string</td>
+				      			<td>fadeOut</td>
+				      			<td>fadeOut</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">17</th>
+				      			<td>closeOnHover</td>
+				      			<td>鼠标mouseout时自动关闭</td>
+				      			<td>boolean</td>
+				      			<td>-</td>
+				      			<td>true</td>
+				      		</tr>
+				      	</tbody>
+					</table>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

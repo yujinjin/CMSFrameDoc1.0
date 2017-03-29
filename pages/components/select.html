@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>select 下拉框</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>select 下拉框</h2>
+					</div>
+					<p class="lead">概述</p>
+					<p>select 下拉框是基于bootstrap的select第三方插件做的封装，可以搜索（只在客户端）、多选、分组。</p>
+					<p>其官方地址是：<a href="http://silviomoreto.github.io/bootstrap-select/" target="_blank">http://silviomoreto.github.io/bootstrap-select/</a></p>
+					<p>demo地址是(天朝可能会报错,因为用的jquery cdn是google的)：<a href="http://silviomoreto.github.io/bootstrap-select/examples/" target="_blank">http://silviomoreto.github.io/bootstrap-select/examples/</a></p>
+					<p>github地址是：<a href="https://github.com/silviomoreto/bootstrap-select" target="_blank">https://github.com/silviomoreto/bootstrap-select</a></p>
+	            	<div class="page-header">
+						<h4>基础用法</h4>
+					</div>
+					<p>适用广泛的基础单选，本站点封装的组件默认是带上"selectpicker"的样式。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="200">
+		            		<div class="description">
+		            			<p>和普通的select用法一样，需要引入"siteSelect"插件即可。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;script&gt;
+	define([&quot;siteSelect&quot;], function () { }
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>分组</h4>
+					</div>
+					<p>备选项进行分组展示</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+								<optgroup label="Picnic">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Relish</option>
+								</optgroup>
+								<optgroup label="Camping">
+									<option>Tent</option>
+									<option>Flashlight</option>
+									<option>Toilet Paper</option>
+								</optgroup>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="300">
+		            		<div class="description">
+		            			<p>optgroup对备选项进行分组，它的label属性为分组名 </p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;optgroup label=&quot;Picnic&quot;&gt;
+		&lt;option&gt;Mustard&lt;/option&gt;
+		&lt;option&gt;Ketchup&lt;/option&gt;
+		&lt;option&gt;Relish&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label=&quot;Camping&quot;&gt;
+		&lt;option&gt;Tent&lt;/option&gt;
+		&lt;option&gt;Flashlight&lt;/option&gt;
+		&lt;option&gt;Toilet Paper&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>搜索</h4>
+					</div>
+					<p>可以利用搜索功能快速查找选项，目前只是从客户端搜索。对于需要通过服务端动态搜索只能基于chang事件自己来处理。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" data-live-search="true" title="select 选项">
+		            			<option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+		            			<option data-tokens="mustard">Burger, Shake and a Smile</option>
+		            			<option data-tokens="frosting">Sugar, Spice and all things nice</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select设置data-live-search属性为true即可启用搜索，搜索的关键词对应的是data-tokens属性的值。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; data-live-search=&quot;true&quot; title=&quotselect 选项&quot &gt ;
+	&lt;option data-tokens=&quot;ketchup mustard&quot;&gt;Hot Dog, Fries and a Soda&lt;/option&gt;
+	&lt;option data-tokens=&quot;mustard&quot;&gt;Burger, Shake and a Smile&lt;/option&gt;
+	&lt;option data-tokens=&quot;frosting&quot;&gt;Sugar, Spice and all things nice&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>限制选项的数量</h4>
+					</div>
+					<p>多选时可以设置最大选项，对于分组的多选也可以自定义每组最大的选项。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" multiple data-max-options="2">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" multiple>
+		            			<optgroup label="Condiments" data-max-options="2">
+		            				<option>Mustard</option>
+		            				<option>Ketchup</option>
+		            				<option>Relish</option>
+		            			</optgroup>
+		            			<optgroup label="Breads" data-max-options="2">
+		            				<option>Plain</option>
+		            				<option>Steamed</option>
+		            				<option>Toasted</option>
+		            			</optgroup>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="400">
+		            		<div class="description">
+		            			<p>为select设置data-max-options属性值即可设置最大选项，对于分组的选项optgroup设置data-max-options属性值表示相应的组最大选项。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; multiple data-max-options=&quot;2&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; multiple&gt;
+	&lt;optgroup label=&quot;Condiments&quot; data-max-options=&quot;2&quot;&gt;
+		&lt;option&gt;Mustard&lt;/option&gt;
+		&lt;option&gt;Ketchup&lt;/option&gt;
+		&lt;option&gt;Relish&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label=&quot;Breads&quot; data-max-options=&quot;2&quot;&gt;
+		&lt;option&gt;Plain&lt;/option&gt;
+		&lt;option&gt;Steamed&lt;/option&gt;
+		&lt;option&gt;Toasted&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>select标题</h4>
+					</div>
+					<p>select没有选值默认显示的标题。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" multiple title="select 选项">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select设置title属性值即可。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; multiple title=&quot;select 选项&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>选项标题</h4>
+					</div>
+					<p>选项选中时显示的是标题内容。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option title="Combo 1">Hot Dog, Fries and a Soda</option>
+		            			<option title="Combo 2">Burger, Shake and a Smile</option>
+		            			<option title="Combo 3">Sugar, Spice and all things nice</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select 选项option设置title属性值即可。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option title=&quot;Combo 1&quot;&gt;Hot Dog, Fries and a Soda&lt;/option&gt;
+	&lt;option title=&quot;Combo 2&quot;&gt;Burger, Shake and a Smile&lt;/option&gt;
+	&lt;option title=&quot;Combo 3&quot;&gt;Sugar, Spice and all things nice&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>选项选中内容格式化</h4>
+					</div>
+					<p>选项选中时显示的是内容格式化，主要是用于多选时选择的选项太多在select框里显示不全就只显示选项的数量。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" multiple data-selected-text-format="count">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" multiple data-selected-text-format="count > 2">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            			<option>Onions</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="290">
+		            		<div class="description">
+		            			<p>为select 设置data-selected-text-format属性'values' | 'static' | 'count' | 'count > x'。</p>
+		            			<p>'values'是默认值就是选中选项的值多个用“,”隔开，'static'是静态不变无论选中了多少选项，'count'当选择超过1个选项时就显示选中选项的数量，'count > x'中的x是选中的选项超过指定的数值才会显示选中选项的数量。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; multiple data-selected-text-format=&quot;count&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; multiple data-selected-text-format=&quot;count &gt; 2&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+	&lt;option&gt;Onions&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>select的样式</h4>
+					</div>
+					<p>可以设置select的样式</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" data-style="btn-primary">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" data-style="btn-info">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" data-style="btn-success">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" data-style="btn-warning">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker" data-style="btn-danger">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="680">
+		            		<div class="description">
+		            			<p>为select 设置data-style属性'btn-primary' | 'btn-info' | 'btn-success' | 'btn-warning | 'btn-danger'。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-primary&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-info&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-success&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-warning&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-style=&quot;btn-danger&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>标记选中的选项</h4>
+					</div>
+					<p>标记选中的选项，这对于单项来说特别有用。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker show-tick">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="290">
+		            		<div class="description">
+		            			<p>为select 设置show-tick属性就启用了。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker show-tick&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>菜单箭头</h4>
+					</div>
+					<p>指定下拉选项有箭头指向。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker show-menu-arrow">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select 设置show-menu-arrow属性就启用了。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker show-menu-arrow&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>选项样式</h4>
+					</div>
+					<p>可以自定义下拉选项的样式。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option>Mustard</option>
+		            			<option class="special">Ketchup</option>
+		            			<option style="background: #5cb85c; color: #fff;">Relish</option>
+		            		</select>
+		            		<style type="text/css">
+		            			.special {
+		            				font-weight: bold !important;
+		            				color: #fff !important;
+		            				background: #bc0000 !important;
+		            				text-transform: uppercase;
+								}
+		            		</style>
+		            	</div>
+		            	<div class="meta" data-height="320">
+		            		<div class="description">
+		            			<p>为select 选项option设置class 或style 样式就可以了。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option class=&quot;special&quot;&gt;Ketchup&lt;/option&gt;
+	&lt;option style=&quot;background: #5cb85c; color: #fff;&quot;&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+	.special {
+		font-weight: bold !important;
+		color: #fff !important;
+		background: #bc0000 !important;
+		text-transform: uppercase;
+	}
+&lt;/style&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>自定义选项</h4>
+					</div>
+					<p>可以自定义选项，比如：图标、自定义内容、副标题。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option data-icon="glyphicon-heart">Ketchup</option>
+		            		</select>
+		            		<select class="selectpicker" multiple>
+		            			<option data-content="<span class='label label-success'>Relish</span>">Relish</option>
+		            			<option data-content="<span class='label label-warning'>告警</span>">告警</option>
+		            		</select>
+		            		<select class="selectpicker" data-size="5">
+		            			<option data-subtext="Heinz">Ketchup</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>自定义选项，图标是需要设置option的data-icon的属性，自定义内容设置data-content的html内容，副标题是需要设置option的data-subtext的属性。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option data-icon=&quot;glyphicon-heart&quot;&gt;Ketchup&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; multiple&gt;
+	&lt;option data-content=&quot;&lt;span class=&#x27;label label-success&#x27;&gt;Relish&lt;/span&gt;&quot;&gt;Relish&lt;/option&gt;
+	&lt;option data-content=&quot;&lt;span class=&#x27;label label-warning&#x27;&gt;告警&lt;/span&gt;&quot;&gt;告警&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot; data-size=&quot;5&quot;&gt;
+	&lt;option data-subtext=&quot;Heinz&quot;&gt;Ketchup&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>选项数量</h4>
+					</div>
+					<p>可以设置选项的数量，当超过的选项数量时滚动条显示。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" data-size="3">
+		            			<option>选项1</option>
+		            			<option>选项2</option>
+		            			<option>选项3</option>
+		            			<option>选项4</option>
+		            			<option>选项5</option>
+		            			<option>选项6</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select 设置data-size属性值。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; data-size=&quot;3&quot;&gt;
+	&lt;option&gt;选项1&lt;/option&gt;
+	&lt;option&gt;选项2&lt;/option&gt;
+	&lt;option&gt;选项3&lt;/option&gt;
+	&lt;option&gt;选项4&lt;/option&gt;
+	&lt;option&gt;选项5&lt;/option&gt;
+	&lt;option&gt;选项6&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>操作选项</h4>
+					</div>
+					<p>可以操作选项，全选或取消全选。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" multiple data-actions-box="true">
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select data-actions-box属性为true就启用了。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; multiple data-actions-box=&quot;true&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>分割线</h4>
+					</div>
+					<p>选项之间的分割线。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker">
+		            			<option>选项1</option>
+		            			<option>选项2</option>
+		            			<option data-divider="true"></option>
+		            			<option>选项3</option>
+		            			<option>选项4</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="200">
+		            		<div class="description">
+		            			<p>选项之间的分割线加入此<code>&lt;option data-divider="true"&gt;&lt;/option&gt;</code>代码。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option&gt;选项1&lt;/option&gt;
+	&lt;option&gt;选项2&lt;/option&gt;
+	&lt;option data-divider=&quot;true&quot;&gt;&lt;/option&gt;
+	&lt;option&gt;选项3&lt;/option&gt;
+	&lt;option&gt;选项4&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>头部选项</h4>
+					</div>
+					<p>下拉选项设置默认头部选项的内容。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" data-header="选择一个选项">
+		            			<option>选项1</option>
+		            			<option>选项2</option>
+		            			<option>选项3</option>
+		            			<option>选项4</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select 设置data-header属性内容就可以了。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; data-header=&quot;选择一个选项&quot;&gt;
+	&lt;option&gt;选项1&lt;/option&gt;
+	&lt;option&gt;选项2&lt;/option&gt;
+	&lt;option&gt;选项3&lt;/option&gt;
+	&lt;option&gt;选项4&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>容器</h4>
+					</div>
+					<p>可以选项的元素内容加入到指定的容器中。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" data-container="body">
+		            			<option>选项1</option>
+		            			<option>选项2</option>
+		            			<option>选项3</option>
+		            			<option>选项4</option>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="150">
+		            		<div class="description">
+		            			<p>为select 设置data-container属性，内容是指定元素的选择器，比如：body、.main-content。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; data-container=&quot;body&quot;&gt;
+	&lt;option&gt;选项1&lt;/option&gt;
+	&lt;option&gt;选项2&lt;/option&gt;
+	&lt;option&gt;选项3&lt;/option&gt;
+	&lt;option&gt;选项4&lt;/option&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>禁用</h4>
+					</div>
+					<p>禁用select下拉框或禁用select选项。</p>
+	            	<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<select class="selectpicker" disabled>
+		            			<option>Mustard</option>
+		            			<option>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker">
+		            			<option>Mustard</option>
+		            			<option disabled>Ketchup</option>
+		            			<option>Relish</option>
+		            		</select>
+		            		<select class="selectpicker test">
+		            			<optgroup label="Picnic" disabled>
+		            				<option>Mustard</option>
+		            				<option>Ketchup</option>
+		            				<option>Relish</option>
+		            			</optgroup>
+		            			<optgroup label="Camping">
+		            				<option>Tent</option>
+		            				<option>Flashlight</option>
+		            				<option>Toilet Paper</option>
+		            			</optgroup>
+		            		</select>
+		            	</div>
+		            	<div class="meta" data-height="520">
+		            		<div class="description">
+		            			<p>设置disabled属性，具体看相应的代码。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;select class=&quot;selectpicker&quot; disabled&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker&quot;&gt;
+	&lt;option&gt;Mustard&lt;/option&gt;
+	&lt;option disabled&gt;Ketchup&lt;/option&gt;
+	&lt;option&gt;Relish&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;selectpicker test&quot;&gt;
+	&lt;optgroup label=&quot;Picnic&quot; disabled&gt;
+		&lt;option&gt;Mustard&lt;/option&gt;
+		&lt;option&gt;Ketchup&lt;/option&gt;
+		&lt;option&gt;Relish&lt;/option&gt;
+	&lt;/optgroup&gt;
+	&lt;optgroup label=&quot;Camping&quot;&gt;
+		&lt;option&gt;Tent&lt;/option&gt;
+		&lt;option&gt;Flashlight&lt;/option&gt;
+		&lt;option&gt;Toilet Paper&lt;/option&gt;
+	&lt;/optgroup&gt;
+&lt;/select&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>事件、方法</h4>
+					</div>
+					<p>请查看bootstrap-select的官方文档。</p>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

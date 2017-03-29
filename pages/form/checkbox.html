@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>checkbox 复选框</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<p class="lead">常用(横排)</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="0" checked="checked">
+								<span class="lbl padding-0"></span>
+								<span>全部城市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="1">
+								<span class="lbl padding-0"></span>
+								<span>上海市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="2">
+								<span class="lbl padding-0"></span>
+								<span>苏州市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="3">
+								<span class="lbl padding-0"></span>
+								<span>无锡市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="4">
+								<span class="lbl padding-0"></span>
+								<span>扬州市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="5">
+								<span class="lbl padding-0"></span>
+								<span>杭州市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="6">
+								<span class="lbl padding-0"></span>
+								<span>杭州市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="7">
+								<span class="lbl padding-0"></span>
+								<span>南京市</span>
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span>宁波市</span>
+							</label>
+						</div>
+					</div>
+					<p class="lead">竖排</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<label class="radio">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span>上海市</span>
+							</label>
+							<label class="radio">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span>南京市</span>
+							</label>
+							<label class="radio">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span>宁波市</span>
+							</label>
+						</div>
+					</div>
+					<p class="lead">竖排带图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<label class="checkbox">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span class="fa fa-android"></span>
+								<span>Android</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span class="fa fa-apple"></span>
+								<span>Apple</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="cityCheckbox" class="ace row-selector" value="8">
+								<span class="lbl padding-0"></span>
+								<span class="fa fa-windows"></span>
+								<span>Window</span>
+							</label>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

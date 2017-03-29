@@ -1,0 +1,137 @@
+﻿.mobile-panel {
+    margin-right: 40px;
+}
+
+.mobile-panel .mobile-preview-panel{
+    float: left;
+    width: 350px;
+}
+
+.mobile-panel .mobile-preview-panel .preview-contents{
+    border: 10px solid #666;
+    height: 550px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.mobile-panel .mobile-handle{
+    margin-left: 370px;
+    width: auto;
+}
+
+.mobile-panel .clear {
+    clear: both;
+}
+
+.mobile-panel .yl_img img {
+    width: 100%;
+    border: 0;
+}
+
+.mobile-panel .yl_content {
+    padding: 10px;
+}
+
+.mobile-panel .yl_content h3 {
+    font: bold 16px/16px 微软雅黑;
+    padding: 15px 0 10px 0;
+}
+
+.mobile-panel .yl_time {
+    font: bold 12px/12px 微软雅黑;
+    color: #b5b5b5;
+    padding-bottom: 10px;
+}
+
+.mobile-panel .yl_img {
+    width: 100%;
+    border: 0;
+}
+
+.mobile-panel .yl_title {
+    font: bold 14px/14px 微软雅黑;
+    color: #b5b5b5;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e3e4;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.mobile-panel .readall {
+    font: bold 14px/14px 微软雅黑;
+    padding: 10px 0;
+    color: #333;
+}
+
+.mobile-panel .readall span {
+    float: right;
+    color: #333;
+}
+
+.mobile-panel .yl2_content {
+    width: 100%;
+    margin: 10px 10px;
+    max-width: 310px;
+    border: 1px solid #e5e3e4;
+    padding: 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.mobile-panel .yl2_picl img {
+    width: 100%;
+    border: 0;
+}
+
+.mobile-panel .yl2_img {
+    width: 100%;
+    position: relative;
+}
+
+.mobile-panel .img_t {
+    height: 18%;
+    width: 100%;
+    background: #000;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    padding: 0 0 0 5px;
+}
+
+.mobile-panel .img_all {
+    margin-top: 10px;
+}
+
+.img_s1 {
+    padding: 5px 0;
+    border-top: 1px solid #e5e3e4;
+}
+
+.mobile-panel .img_s1_t {
+    float: left;
+    margin-top: 7%;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 微软雅黑;
+}
+
+.mobile-panel .yl2_pic2 {
+    width: 20%;
+    float: right;
+}
+
+.mobile-panel .yl2_pic2 img {
+    width: 100%;
+    min-height: 60px;
+    border: 0;
+}
+

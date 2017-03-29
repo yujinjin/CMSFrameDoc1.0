@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>form 表单</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.cover-area {
+			    width: 500px;
+			    max-width: 100%;
+			    background-color: white;
+			    border: 1px solid lightGrey;
+			    border-radius: 4px;
+			    position: relative;
+			}
+			
+			.cover-hd {
+			    padding: 2px 8px 3px;
+			    position: relative;
+			}
+			
+			.inline {
+			    display: inline-block !important;
+			}
+			
+			.upload-tip {
+			    font-size: 12px;
+			    line-height: 28px;
+			    text-align: right;
+			    position: absolute;
+			    top: 3px;
+			    right: 8px;
+			}
+			
+			.cover-bd {
+			    border-top: 1px solid #CCC;
+			    font-size: 0;
+			    overflow: hidden;
+			    padding: 8px;
+			}
+			
+			.upload-delete-btn {
+			    background-image: url(../../assets/images/icon_remove.png);
+			    position: absolute;
+			    top: 2px;
+			    right: 5px;
+			    height: 20px;
+			    width: 20px;
+			    cursor: pointer;
+			    z-index: 1000;
+			}
+			
+			.panel {
+				margin-top: 10px;
+			}
+	    </style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+					<h2>基本表单</h2>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>左图右表单</strong>
+					</div>
+					<div class="panel-body">
+						 <div class="row">
+						 	<div class="col-md-6 b-r">
+						 		<h4>还不是会员？</h4>
+						 		<samp>您可以注册一个新账户</samp>
+						 		<p class="text-center">
+	                                <a href="javascript:void(0);">
+	                                	<i class="glyphicon glyphicon-menu-right big-icon"></i>
+	                                </a>
+	                        	</p>
+						 	</div>
+						 	<div class="col-md-6">
+						 		<form class="form-horizontal">
+		                            <p>欢迎登录本站(⊙o⊙)</p>
+		                            <div class="form-group">
+		                                <label class="col-sm-3 control-label">
+		                                	用户名：<span class="asterisk">*</span>
+		                                </label>
+		                                <div class="col-sm-8">
+		                                    <input placeholder="用户名" class="form-control" type="email"> <span class="help-block m-b-none">请输入您注册时所填的E-mail</span>
+		                                </div>
+		                            </div>
+		                            <div class="form-group">
+		                                <label class="col-sm-3 control-label">
+		                                	密码：<span class="asterisk">*</span>
+		                                </label>
+		                                <div class="col-sm-8">
+		                                    <input placeholder="密码" class="form-control" type="password">
+		                                </div>
+		                            </div>
+		                            <div class="form-group">
+		                                <div class="col-sm-offset-9 col-sm-12">
+		                                    <button class="btn btn-sm btn-success" type="submit">登 录</button>
+		                                </div>
+		                            </div>
+		                        </form>
+						 	</div>
+						 </div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>表单流布局</strong>
+					</div>
+					<div class="panel-body">
+						<form class="form-inline">
+	  						<div class="form-group">
+	    						<label for="exampleInputName2">用户名<span class="asterisk">*</span></label>
+	    						<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+	  						</div>
+	  						<div class="form-group">
+	    						<label for="exampleInputEmail2">密码</label>
+	    						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+	  						</div>
+	  						<div class="form-group">
+	    						<label>
+	      							<input type="checkbox"> 自动登录
+	    						</label>
+	  						</div>
+	  						<button type="submit" class="btn btn-success">登录</button>
+						</form>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>表单流布局（上下）</strong>
+					</div>
+					<div class="panel-body">
+						<form class="form-inline">
+	  						<div class="form-group">
+	    						<label for="exampleInputName2" class="control-label">用户名<span class="asterisk">*</span></label>
+	    						<div>
+	    							<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+	  							</div>
+	  						</div>
+	  						<div class="form-group">
+	    						<label for="exampleInputEmail2" class="control-label">密码<span class="asterisk">*</span></label>
+	    						<div>
+		    						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+	    						</div>
+	  						</div>
+	  						<div class="form-group">
+	  							<label class="control-label">
+	      							自动登录
+	    						</label>
+	    						<div>
+									<input type="checkbox" name="checkbox"> 
+								</div>
+	  						</div>
+	  						<button type="submit" class="btn btn-success">登录</button>
+						</form>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>表单水平排列（一列）</strong>
+					</div>
+					<div class="panel-body">
+						<div class="form-horizontal">
+	                     	<div class="form-group" data-code="text">
+								<label for="text" class="col-sm-3 control-label">
+									文本框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="text" placeholder="请输入文本">
+									<p class="help-block">请输入文本内容.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="password">
+								<label for="password" class="col-sm-3 control-label">
+									密码框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" name="password" placeholder="请输入密码">
+									<p class="help-block">请输入密码.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="select">
+								<label for="select" class="col-sm-3 control-label">
+									下拉列表<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<select class="form-control" name="select">
+		                                <option>选项 1</option>
+		                                <option>选项 2</option>
+		                                <option>选项 3</option>
+		                                <option>选项 4</option>
+		                            </select>
+									<p class="help-block">请选择选项.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="textContent">
+								<label for="select" class="col-sm-3 control-label">
+									纯文本
+								</label>
+								<div class="col-sm-9">
+									<p class="form-control-static">这是纯文本内容信息...</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="file">
+								<label for="password" class="col-sm-3 control-label">
+									文件域<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<div class="cover-area">
+				                        <div class="cover-hd">
+				                            <div class="inline">
+				                                <div id="upload-button" class="btn btn-default">
+													选择图片
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <p class="upload-tip">（最佳尺寸：宽720px 高400px）</p>
+			                            <div id="upload-preview" class="img-area cover-bd imgfile" style="position:relative;">
+			                            	<div class="s1" style="width:160px; height:120px;position:relative;">
+											   	<img src="../../assets/images/Test/adam-jansen.jpg" style="width: 160px; height: 120px;">
+											   	<div class="upload-delete-btn" title="删除"></div>
+											</div>
+			                            </div>
+				                    </div>
+								</div>
+							</div>
+							<div class="form-group" data-code="radio">
+								<label class="col-sm-3 control-label">
+									单选框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<label class="radio-inline">
+										<input type="radio" name="radio" class="ace row-selector" value="0" checked="checked">
+										<span class="lbl padding-0"></span>
+										<span>选项一</span>
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio" class="ace row-selector" value="0">
+										<span class="lbl padding-0"></span>
+										<span>选项二</span>
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio" class="ace row-selector" value="0">
+										<span class="lbl padding-0"></span>
+										<span>选项三</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group" data-code="checkbox">
+								<label class="col-sm-3 control-label">
+									复选框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox" class="ace row-selector" value="0">
+										<span class="lbl padding-0"></span>
+										<span>选项一</span>
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox" class="ace row-selector" value="0">
+										<span class="lbl padding-0"></span>
+										<span>选项二</span>
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox" class="ace row-selector" value="0">
+										<span class="lbl padding-0"></span>
+										<span>选项三</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group" data-code="textarea">
+								<label class="col-sm-3 control-label">
+									文本域
+								</label>
+								<div class="col-sm-9">
+									<textarea class="form-control" rows="3" placeholder="请填写内容"></textarea>
+								</div>
+							</div>
+							<div class="form-group" data-code="button">
+								<div class="col-sm-12 col-sm-offset-5">
+									<button type="button" class="btn btn-default">取消</button>
+									<button type="button" class="btn btn-primary">保存</button>
+								</div>
+							</div>
+	                	</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>表单水平排列（二列）</strong>
+					</div>
+					<div class="panel-body">
+						<div class="form-horizontal">
+	                     	<div class="form-group col-md-6" data-code="text">
+								<label for="text" class="col-sm-3 control-label">
+									文本框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="text" placeholder="请输入文本">
+									<p class="help-block">请输入文本内容.</p>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="password">
+								<label for="password" class="col-sm-3 control-label">
+									密码框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" name="password" placeholder="请输入密码">
+									<p class="help-block">请输入密码.</p>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="select">
+								<label for="select" class="col-sm-3 control-label">
+									下拉列表<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<select class="form-control" name="select">
+	                                    <option>选项 1</option>
+	                                    <option>选项 2</option>
+	                                    <option>选项 3</option>
+	                                    <option>选项 4</option>
+	                                </select>
+									<p class="help-block">请选择选项.</p>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="file">
+								<label for="password" class="col-sm-3 control-label">
+									文件域<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<input class="form-control" type="file" name="file">
+									<p class="help-block">请选择文件.</p>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="radio">
+								<label class="col-sm-3 control-label">
+									单选框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项一
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项二
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项三
+									</label>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="checkbox">
+								<label class="col-sm-3 control-label">
+									复选框<span class="asterisk">*</span>
+								</label>
+								<div class="col-sm-9">
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项一
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项二
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项三
+									</label>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="textContent">
+								<label for="select" class="col-sm-3 control-label">
+									纯文本
+								</label>
+								<div class="col-sm-9">
+									<p class="form-control-static">这是纯文本内容信息...</p>
+								</div>
+							</div>
+							<div class="form-group col-md-6" data-code="textarea">
+								<label class="col-sm-3 control-label">
+									文本域
+								</label>
+								<div class="col-sm-9">
+									<textarea class="form-control" rows="3" placeholder="请填写内容"></textarea>
+								</div>
+							</div>
+							<div class="form-group" data-code="button">
+								<div class="col-sm-12 col-sm-offset-5">
+									<button type="button" class="btn btn-default">取消</button>
+									<button type="button" class="btn btn-primary">保存</button>
+								</div>
+							</div>
+	                	</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong>表单水平排列（上下）</strong>
+					</div>
+					<div class="panel-body">
+						<div>
+	                     	<div class="form-group" data-code="text">
+								<label for="text" class="control-label">
+									文本框<span class="asterisk">*</span>
+								</label>
+								<div>
+									<input type="text" class="form-control" name="text" placeholder="请输入文本">
+									<p class="help-block">请输入文本内容.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="password">
+								<label for="password" class="control-label">
+									密码框<span class="asterisk">*</span>
+								</label>
+								<div>
+									<input type="password" class="form-control" name="password" placeholder="请输入密码">
+									<p class="help-block">请输入密码.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="select">
+								<label for="select" class="control-label">
+									下拉列表<span class="asterisk">*</span>
+								</label>
+								<div>
+									<select class="form-control" name="select">
+	                                     <option>选项 1</option>
+	                                     <option>选项 2</option>
+	                                     <option>选项 3</option>
+	                                     <option>选项 4</option>
+	                                 </select>
+									<p class="help-block">请选择选项.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="textContent">
+								<label for="select" class="control-label">
+									纯文本
+								</label>
+								<div>
+									<p class="form-control-static">这是纯文本内容信息...</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="file">
+								<label for="password" class="control-label">
+									文件域<span class="asterisk">*</span>
+								</label>
+								<div>
+									<input class="form-control" type="file" name="file">
+									<p class="help-block">请选择文件.</p>
+								</div>
+							</div>
+							<div class="form-group" data-code="radio">
+								<label class="control-label">
+									单选框<span class="asterisk">*</span>
+								</label>
+								<div>
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项一
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项二
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="radio"> 选项三
+									</label>
+								</div>
+							</div>
+							<div class="form-group" data-code="checkbox">
+								<label class="control-label">
+									复选框<span class="asterisk">*</span>
+								</label>
+								<div>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项一
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项二
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" name="checkbox"> 选项三
+									</label>
+								</div>
+							</div>
+							<div class="form-group" data-code="textarea">
+								<label class="control-label">
+									文本域
+								</label>
+								<div>
+									<textarea class="form-control" rows="3" placeholder="请填写内容"></textarea>
+								</div>
+							</div>
+							<div class="form-group" data-code="button">
+								<div class="col-sm-12 col-sm-offset-5">
+									<button type="button" class="btn btn-default">取消</button>
+									<button type="button" class="btn btn-primary">保存</button>
+								</div>
+							</div>
+	                	</div>
+					</div>
+				</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

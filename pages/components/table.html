@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>table 表格</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>table 表格</h2>
+					</div>
+					<p class="lead">概述</p>
+					<p>table 表格是基于jquery的Datatables第三方插件做的封装。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。 本站点的封装重点是针对服务器数据请求。</p>
+					<p>其官方地址是：<a href="https://www.datatables.net/" target="_blank">https://www.datatables.net/</a></p>
+					<p>中文网地址是：<a href="http://datatables.club/" target="_blank">http://datatables.club/</a></p>
+					<p>github地址是：<a href="https://github.com/DataTables/DataTables" target="_blank">https://github.com/DataTables/DataTables</a></p>
+	            	<div class="page-header">
+						<h4>table 表格基本用法</h4>
+					</div>
+					<p>默认ajax从服务端请求数据，可以单选、固定表头、列拖动、带分页信息。本demo的订单数据是一个静态的json，虽然点分页的时候会查询数据但获得的json数据是没有变。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <div id="filter-panel" class="alert alert-lightsGray fs12 clearfix">
+						            <div class="clearfix search-form">
+						                <div class="clearfix pull-left search-input">
+						                    <div class="pull-left">搜索：</div>
+						                    <div class="input-group pull-left w-middle">
+						                        <input class="form-control pull-left" placeholder="用户名/姓名/显示名/电子邮箱" name="filter" filterfield="filter" autopostback="true" type="text">
+						                        <span class="input-group-btn">
+						                            <button class="btn btn-default btnSearch" type="button"><i class="glyphicon glyphicon-search"></i></button>
+						                        </span>
+						                    </div>
+						                </div>
+						            </div>
+						        </div>
+						        <!-- 过滤条件end -->
+						        <table data-index="1" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="725">
+		            		<div class="description">
+		            			<p>通过构造函数实例化来初始数据表格，该构造函数有2个参数，第一个参数就数表格的配置选项，第二个参数就是数据表格的选择器如果不填就默认是<code>table</code>。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns":  [{ 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, {
+			"data": "orderNo", "title": "订单编号"
+		}, {
+  			"data": "sendMan", "title": "送货人"
+		}, {
+			"data": "receiveMan", "title": "收货人"
+		}, {
+			"data": "receiveManTel", "title": "收货人电话"
+		}, {
+		    "data": "price", "title": "订单价格"
+		}, {
+			"data": "createTime", "title": "创建时间",
+		    "render": function (data, type, row) {
+	      		if(data && data.time){
+	      			return site.utils.dateFormat(new Date(data.time), "yyyy-MM-dd hh:ss:mm");
+	      		} else {
+	      			return "空";
+	      		}
+		    }
+		}, {
+			"data": "remark", "title": "备注", "visible": false
+		}],
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	  	}
+	}, $("table[data-index=1]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>可多选的表格</h4>
+					</div>
+					<p>使用 Checkbox选择多行数据</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="2" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="725">
+		            		<div class="description">
+		            			<p>多选设置相应的列为"checkbox"就可以了，如果需要radio则设置为"radio"</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns": ["checkbox", { 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, {
+			"data": "orderNo", "title": "订单编号"
+		}, {
+  			"data": "sendMan", "title": "送货人"
+		}, {
+			"data": "receiveMan", "title": "收货人"
+		}, {
+			"data": "receiveManTel", "title": "收货人电话"
+		}, {
+		    "data": "price", "title": "订单价格"
+		}, {
+			"data": "createTime", "title": "创建时间",
+		    "render": function (data, type, row) {
+	      		if(data && data.time){
+	      			return site.utils.dateFormat(new Date(data.time), "yyyy-MM-dd hh:ss:mm");
+	      		} else {
+	      			return "空";
+	      		}
+		    }
+		}, {
+			"data": "remark", "title": "备注", "visible": false
+		}],
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	  	}
+	}, $("table[data-index=2]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>可拖动行排序</h4>
+					</div>
+					<p>可以上下拖动行排序</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="3" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="350">
+		            		<div class="description">
+		            			<p>上下拖动只需设置相应的列为"move"就可以了。对于移动之后有一个“onRowReorder”回调函数，它提供有3个参数e(jquery 事件对象)、details(发生改变的列数组)、edit(提供编辑器执行多行编辑所需的信息)。</p>
+		            			<p>特别说明该配置"{autoFill:{update: false}}"控制当拖拽完成后，数据是否立马更新显示，默认是立马更新显示的。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns": ["move", { 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, ...],
+		onRowReorder: function(e, diff, edit){
+			console.info(e, diff, edit);
+		},
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	 	}
+	}, $("table[data-index=3]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+	            	<div class="page-header">
+						<h4>固定列、横向滚动、纵向滚动</h4>
+					</div>
+					<p>横纵内容过多时，可选择固定列</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="4" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="480">
+		            		<div class="description">
+		            			<p>固定列和表头可以同时使用，固定列时可以与禁止列拖动一起使用，默认横向滚动是响应式的。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns": ["radio", { 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, ...],
+		colReorder: {
+			fixedColumnsLeft: 1,
+			fixedColumnsRight: 1,
+			realtime: true
+		},
+		fixedColumns: {
+			leftColumns: 1,
+			rightColumns: 1
+		},
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	 	}
+	}, $("table[data-index=4]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>多级表头</h4>
+					</div>
+					<p>数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。但不要去用固定表头的选项<code>fixedHeader: false</code>以及列<code>colReorder</code>的操作(拖动)，这些都是互斥的。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="5" class="table table-hover table-striped table-bordered" style="width:100%">
+						        	<thead>
+							        	<tr>
+				                        	<th rowspan="2">选择</th>
+				                        	<th rowspan="2">ID</th>
+				                            <th rowspan="2">订单号</th>
+				                            <th rowspan="2">送货人</th>
+				                            <th colspan="2">收货人信息</th>
+				                            <th rowspan="2">价格</th>
+				                            <th rowspan="2">创建时间</th>
+				                            <th rowspan="2">备注</th>
+				                        </tr>
+				                        <tr>
+				                        	<th>收货人</th>
+				                        	<th>收货电话</th>
+				                        </tr>
+				                   	</thead>
+				                   	<tbody></tbody>
+						        </table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="950">
+		            		<div class="description">
+		            			<p>对于复杂的表头得通过<code>table</code>的<code>thead</code>来设置。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;table data-index=&quot;5&quot; class=&quot;table table-hover table-striped table-bordered&quot; style=&quot;width:100%&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;选择&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;ID&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;订单号&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;送货人&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot;&gt;收货人信息&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;价格&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;创建时间&lt;/th&gt;
+			&lt;th rowspan=&quot;2&quot;&gt;备注&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;收货人&lt;/th&gt;
+			&lt;th&gt;收货电话&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+   	&lt;tbody&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;script&gt;
+define([&quot;siteTable&quot;], function (siteTable) {
+	new siteTable({
+		&quot;columns&quot;: [&quot;radio&quot;, { 
+			&quot;data&quot;: &quot;id&quot;, &quot;title&quot;: &quot;ID&quot;, &quot;orderable&quot;: false, &quot;visible&quot;: false 
+		}, ...],
+		colReorder: {
+			fixedColumnsLeft: 1,
+			fixedColumnsRight: 1,
+			realtime: true
+		},
+		fixedColumns: {
+			leftColumns: 1,
+			rightColumns: 1
+		},
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	 	}
+	}, $(&quot;table[data-index=5]&quot;));
+});
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>排序</h4>
+					</div>
+					<p>对表格进行排序，可快速查找或对比数据。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="6" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="380">
+		            		<div class="description">
+		            			<p>对于需要排序的列只需要设置<code>columns</code>中的列设置相应的属性<code>"orderable": true</code>就可以了。</p>
+		            			<p>列表初始化时如果需要设置相应的列排序，需要设置<code>order: [[1, 'asc'], [2, 'desc']]</code>。服务端获取排序的参数格式<code>sorting:orderNo,sendMan desc</code>,各个字段用","隔开升序默认不需要传值"asc"。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns": ["radio", { 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, {
+			"data": "orderNo", "title": "订单编号", "orderable": true
+		}, {
+  		    "data": "sendMan", "title": "送货人", "orderable": true
+  		} ...],
+		order: [[1, 'asc'], [2, 'desc']],
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	 	}
+	}, $("table[data-index=6]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+	            	<div class="page-header">
+						<h4>自定义列模板</h4>
+					</div>
+					<p>自定义列的显示内容，可组合其他组件使用。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="7" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="780">
+		            		<div class="description">
+		            			<p>对于需要自定义列只需要设置<code>columns</code>中的列设置相应的属性<code>render</code>,它是一个回调函数，返回html的字符串，传入的参数有data(当前列的data)、type(数据类型 - 有这些值：filter、display、type、sort)、row(整个row的数据)。</p>
+		            			<p>对于自定义列框架提供了几个常用的列有<code>renderColumnBoolean</code>、<code>renderIsActive</code>、<code>renderIsActive2</code>、<code>renderDateTime</code>、<code>renderDatetimeShort</code>、<code>renderDate</code>、<code>renderImage</code>。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns":  [{ 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, {
+			"data": "orderNo", "title": "订单编号", "render": function (data, type, row) {
+				return '&lt;a href="#"&gt;' + data + '&lt;/labe&gt;';
+			}
+		}, {
+  			"data": "sendMan", "title": "送货人", "render": function (data, type, row) {
+				return '&lt;label class="label label-info"&gt;' + data + '&lt;/labe&gt;';
+			}
+		}, {
+			"data": "receiveMan", "title": "收货人"
+		}, {
+			"data": "receiveManTel", "title": "收货人电话"
+		}, {
+		    "data": "price", "title": "订单价格", "render": function (data, type, row) {
+	      		'&lt;i class="glyphicon glyphicon-yen"&gt;&lt;/i&gt;' + data;
+		    }
+		}, {
+			"data": "createTime", "title": "创建时间", "render": siteTable.renderDateTime
+		}, {
+			"data": "remark", "title": "备注", "visible": false
+		}],
+		customerAjax: {
+			url: site.api.order.queryOrderList
+	 	}
+	}, $("table[data-index=7]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>Options</h4>
+					</div>
+					<p>下面是常用的table配置参数，如果还需要更多请查看jquery.datatables的官方文档。</p>
+					<table class="table table-bordered">
+						<thead>
+        					<tr>
+          						<th>序号</th>
+				          		<th>参数</th>
+				          		<th>说明</th>
+				          		<th>类型</th>
+				          		<th>可选值</th>
+				          		<th>默认值</th>
+				        	</tr>
+				      	</thead>
+				      	<tbody>
+				      		<tr>
+				      			<th scope="row">1</th>
+				      			<td>jQueryUI</td>
+				      			<td>控制是否使用jquerui的样式（需要引入jqueryui的css）</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">2</th>
+				      			<td>info</td>
+				      			<td>控制是否显示表格左下角的信息</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">3</th>
+				      			<td>lengthChange</td>
+				      			<td>是否允许用户改变表格每页显示的记录数</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">4</th>
+				      			<td>ordering</td>
+				      			<td>是否允许Datatables开启排序</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">5</th>
+				      			<td>paging</td>
+				      			<td>是否开启本地分页</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">6</th>
+				      			<td>processing</td>
+				      			<td>是否显示处理状态(排序的时候，数据很多耗费时间长的话，也会显示这个)</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">7</th>
+				      			<td>scrollX</td>
+				      			<td>设置水平滚动</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">7</th>
+				      			<td>scrollY</td>
+				      			<td>设置垂直滚动</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">8</th>
+				      			<td>scrollY</td>
+				      			<td>设置垂直滚动高度。例："200px"</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">9</th>
+				      			<td>serverSide</td>
+				      			<td>是否开启服务器模式</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">10</th>
+				      			<td>stateSave</td>
+				      			<td>保存状态 - 在页面重新加载的时候恢复状态（页码等内容）</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">10</th>
+				      			<td>autoWidth</td>
+				      			<td>控制Datatables是否自适应宽度</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">11</th>
+				      			<td>deferRender</td>
+				      			<td>控制Datatables的延迟渲染，可以提高初始化的速度</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">11</th>
+				      			<td>customerAjax</td>
+				      			<td>自定义了ajax配置选项，调用的就是站点内的site.ajax</td>
+				      			<td>option</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">12</th>
+				      			<td>data</td>
+				      			<td>指定table显示的数据</td>
+				      			<td>array</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">12</th>
+				      			<td>data</td>
+				      			<td>指定table显示的数据</td>
+				      			<td>array</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">13</th>
+				      			<td>footerCallback</td>
+				      			<td>tfoot的回调函数,参数5个tfoot, data, start, end, display</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">14</th>
+				      			<td>createdRow</td>
+				      			<td>行被创建时回调函数,参数3个row, data, dataIndex</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">15</th>
+				      			<td>drawCallback</td>
+				      			<td>表格每次重绘回调函数,参数1个settings </td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">16</th>
+				      			<td>formatNumber</td>
+				      			<td>数字格式化时的回调函数,参数1个toFormat</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">17</th>
+				      			<td>headerCallback</td>
+				      			<td>表格Header显示时的回调函数,参数5个 thead, data, start, end, display </td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">18</th>
+				      			<td>initComplete</td>
+				      			<td>始化结束后的回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">19</th>
+				      			<td>preDrawCallback</td>
+				      			<td>表格绘制前的回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">20</th>
+				      			<td>rowCallback</td>
+				      			<td>表格行(Row)绘制的回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">21</th>
+				      			<td>stateLoadCallback</td>
+				      			<td>该回调函数定义了从哪里和如何读取保存的状态</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">22</th>
+				      			<td>stateLoaded</td>
+				      			<td>状态加载完成之后的回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">23</th>
+				      			<td>stateLoadParams</td>
+				      			<td>状态加载完成之后，对数据处理的回调函数</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">24</th>
+				      			<td>stateSaveCallback</td>
+				      			<td>该回调函数定义了状态该存储在什么地方及如何存储</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">25</th>
+				      			<td>dom</td>
+				      			<td>定义DataTables的组件元素的显示和显示顺序</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>lfrtip</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">26</th>
+				      			<td>lengthMenu</td>
+				      			<td>定义在每页显示记录数的select中显示的选项</td>
+				      			<td>array</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">27</th>
+				      			<td>order</td>
+				      			<td>表格在初始化的时候的排序</td>
+				      			<td>array</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">28</th>
+				      			<td>pageLength</td>
+				      			<td>改变初始的页面长度(每页显示的记录数)</td>
+				      			<td>integer</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">29</th>
+				      			<td>language</td>
+				      			<td>DataTables的语言配置</td>
+				      			<td>options</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      	</tbody>
+				    </table>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

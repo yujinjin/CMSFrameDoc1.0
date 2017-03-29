@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="登录" />
+	    <meta name="description" content="描述">
+		<title>站点登录</title>
+		<link rel="shortcut icon" href="/favicon.ico">
+	    <link rel="Bookmark" href="/favicon.ico">
+	    <link href="./assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+	    <link href="./assets/css/beyond.css" rel="stylesheet" />
+	    <link href="./assets/css/site.css" rel="stylesheet" />
+	    <link href="./assets/css/login.css" rel="stylesheet" />
+	</head>
+	<body>
+		<form class="login-form" data-form='validate' method="post">
+	        <!-- 资源加载防止白屏 -->
+	        <div class="loading-container loading-inactive">
+	            <div class="loader"></div>
+	        </div>
+	        <div class="login-container animated fadeInDown">
+	            <div class="loginbox bg-white">
+	                <div class="loginbox-title">登录</div>
+	                <div class="loginbox-textbox">
+	                    <input type="text" class="form-control" name="tenancyName" maxlength="64" placeholder="租户标识" data-rule-required="true"/>
+	                </div>
+	                <div class="loginbox-textbox">
+	                    <input type="text" class="form-control" name="usernameOrEmailAddress" value="" placeholder="用户名或邮箱地址" data-rule-required="true"/>
+	                </div>
+	                <div class="loginbox-textbox">
+	                    <input type="password" class="form-control" name="password" placeholder="密码" data-rule-required="true"/>
+	                </div>
+	                <div class="loginbox-forgot">
+	                    <a href="">忘记密码？</a>
+	                </div>
+	                <div class="loginbox-submit">
+	                    <input type="submit" class="btn btn-primary btn-block" value="登录">
+	                </div>
+	                <div class="loginbox-submit">
+	                    <a class="btn btn-default btn-block">注册新帐号</a>
+	                </div>
+	            </div>
+	            <div class="logobox hidden"></div>
+	        </div>
+	    </form>
+	    <script src="./assets/scripts/require-2.2.0.js" data-main="./assets/js/site-config.js"></script>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+﻿<!--
+    作者：yujinjin9@126.com
+    时间：2016-07-29
+    描述：存放公共组件模板页面
+-->
+<!-- 站点header -->
+<script type="text/x-template" id="header-tpl">
+    <div class="navbar-container">
+        <!-- Navbar Barnd -->
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <img src="${'/assets/images/logo.png'|innerResource}" alt="" />
+                </small>
+            </a>
+        </div>
+        <!-- /Navbar Barnd -->
+        <!-- Sidebar Collapse -->
+        <div class="sidebar-collapse" id="sidebar-collapse">
+            <i class="collapse-icon fa fa-bars"></i>
+        </div>
+        <!-- /Sidebar Collapse -->
+        <!-- Account Area and Settings --->
+        <div class="navbar-header pull-right">
+            <div class="navbar-account">
+                <ul class="account-area">
+                    <li>
+                        <a class="dropdown-toggle wave in" data-toggle="dropdown" id="chat-link" title="Chat" href="#">
+                            <i class="icon glyphicon glyphicon-comment"></i>
+                            <span class="badge">${messages.length}</span>
+                        </a>
+                        <!--Messages Dropdown-->
+                        <ul class="pull-right dropdown-menu dropdown-arrow dropdown-messages">
+                        	{`each messages as message,index}
+                        	<li>
+                        		<a href="#">
+                        			<img src="${message.avatar|resource}" class="message-avatar">
+                        			<div class="message">
+                                        <span class="message-sender">${message.sender}</span>
+                                        <span class="message-time">${message.time}</span>
+                                        <span class="message-subject">${message.subject}</span>
+                                        <span class="message-body">${message.body}</span>
+                                    </div>
+                        		</a>
+                        	</li>
+                        	{`/each}
+                        </ul>
+                        <!--/Messages Dropdown-->
+                    </li>
+                    <li>
+                        <a class="login-area dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="true">
+                            <div class="avatar" title="View your public profile" style="border-left: 0px;">
+                                <img src="${'/assets/images/Test/head.png'|innerResource}">
+                            </div>
+                            <section>
+                                <h2><span class="profile"><span>管理员</span></span></h2>
+                            </section>
+                        </a>
+                        <ul class="user-menu pull-right dropdown-menu">
+                            <li><a data-type="myAccount"><i class="glyphicon glyphicon-user"></i><span class="menu-text">我的帐户</span></a></li>
+                            <li><a data-type="updatePassword"><i class="glyphicon glyphicon-lock"></i><span class="menu-text">修改密码</span></a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="${'/login.html'|innerResource}"><i class="glyphicon glyphicon-log-out"></i><span class="menu-text">退出</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /Account Area -->
+                    <!--Note: notice that setting div must start right after account area list.
+                    no space must be between these elements-->
+                    <!-- Settings -->
+                </ul>
+            </div>
+        </div>
+        <!-- /Account Area and Settings -->
+    </div>
+</script>
+
+<!-- 站点footer -->
+<script type="text/x-template" id="sidebar-tpl">
+    <!-- Page Sidebar Header 暂时不需要-->
+    <div class="sidebar-header-wrapper hidden">
+        <input type="text" class="searchinput" />
+        <i class="searchicon fa fa-search"></i>
+        <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+    </div>
+    <!-- /Page Sidebar Header -->
+    <!-- Sidebar Menu -->
+    <ul class="nav sidebar-menu">
+    	{`each _ as topitems}
+		<li>
+			{`if topitems.items != null && topitems.items.length > 0}
+			<a href="javascript:void;" class="menu-dropdown">
+                <i class="${topitems.icon}"></i>
+                <span class="menu-text">${topitems.name}</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+            {`each topitems.items as childerItem}
+            	<li>
+                	{`if childerItem.items != null && childerItem.items.length > 0}
+                	<a href="javascript:void;" class="menu-dropdown">
+                        <span class="menu-text">${topitems.name}</span>
+                        <i class="menu-expand"></i>
+                    </a>
+                	{`include "#sidebar-submenu-tpl", childerItem.items}
+					{`else}
+					<a href="${childerItem.url|innerResource}">
+                        <span class="menu-text">${childerItem.name}</span>
+                    </a>
+	            	{`/if}
+            	</li>
+            {`/each}
+            </ul>
+            {`/if}
+		</li>
+		{`/each}
+    </ul>
+    <!-- /Sidebar Menu -->
+</script>
+<script type="text/template" id="sidebar-submenu-tpl">
+	<ul class="submenu">
+		{`each _ as topitems}
+			<li>
+				{`if topitems.items != null && topitems.items.length > 0}
+				<a href="javascript:void;" class="menu-dropdown">
+                    <i class="${topitems.icon}"></i>
+                    <span class="menu-text">${topitems.name}</span>
+                    <i class="menu-expand"></i>
+                </a>
+				{`include "#sidebar-submenu-tpl", topitems.items}
+				{`else}
+				<a href="${topitems.url|innerResource}">
+                    <i class="${topitems.icon}"></i>
+                    <span class="menu-text">${topitems.name}</span>
+                </a>
+	            {`/if}
+			</li>
+		{`/each}
+	</ul>
+</script>

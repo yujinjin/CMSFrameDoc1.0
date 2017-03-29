@@ -1,0 +1,370 @@
+/** 过滤器样式start **/
+.alert {
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+.fs12 {
+    font-size: 12px !important;
+}
+
+.alert-lightsGray {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #e8e8e8;
+}
+
+/** 过滤器样式end **/
+
+.buttons-panel {
+    padding-bottom: 10px;
+}
+
+    .buttons-panel button {
+        margin: 2px 1px;
+    }
+
+/*table > tbody > tr.selected {
+    background-color: #E7EAEC !important;
+}*/
+
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+table.dataTable > tbody > tr.selected {
+    background-color: #cce6ee !important;
+}
+
+table.dataTable > tbody > tr:hover {
+    background-color: #eff3f8;
+}
+
+table label {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: inherit;
+}
+
+.icon-move {
+    font-size: 16px;
+    cursor: move;
+}
+
+/**** bootstrap.datatable 样式  start ******/
+
+.table-bootstrap thead tr {
+    color: #707070;
+    font-weight: normal;
+    background: #f2f2f2;
+    background-image: -webkit-gradient(linear,left 0,left 100%,from(#f8f8f8),to(#ececec));
+    background-image: -webkit-linear-gradient(top,#f8f8f8,0%,#ececec,100%);
+    background-image: -moz-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+    background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8',endColorstr='#ffececec',GradientType=0);
+}
+
+table.dataTable {
+    clear: both;
+    max-width: none !important;
+    border-collapse: separate !important;
+}
+
+    table.dataTable > thead > tr > th {
+        border-bottom: 2px solid #2dc3e8;
+        background-color: #fff;
+    }
+
+    table.dataTable td,
+    table.dataTable th {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+        table.dataTable td.dataTables_empty,
+        table.dataTable th.dataTables_empty {
+            text-align: center;
+        }
+
+    table.dataTable.nowrap th,
+    table.dataTable.nowrap td {
+        white-space: nowrap;
+    }
+
+div.dataTables_wrapper div.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+    padding: 2px 6px; 
+    font-size: 12px;
+    display: inline-block;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+}
+
+    div.dataTables_wrapper div.dataTables_filter label {
+        font-weight: normal;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter input {
+        margin-left: 0.5em;
+        display: inline-block;
+        width: auto;
+    }
+
+div.dataTables_wrapper div.dataTables_info {
+    /*padding-top: 8px;*/
+    float: left;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        margin: 2px 0;
+        white-space: nowrap;
+    }
+
+div.dataTables_wrapper div.dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -26px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+table.dataTable thead > tr > th.sorting_asc, 
+table.dataTable thead > tr > th.sorting_desc, 
+table.dataTable thead > tr > th.sorting,
+table.dataTable thead > tr > td.sorting_asc,
+table.dataTable thead > tr > td.sorting_desc,
+table.dataTable thead > tr > td.sorting {
+    padding-right: 23px;
+}
+
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+    outline: none;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    position: relative;
+}
+
+    table.dataTable thead .sorting:after,
+    table.dataTable thead .sorting_asc:after,
+    table.dataTable thead .sorting_desc:after,
+    table.dataTable thead .sorting_asc_disabled:after,
+    table.dataTable thead .sorting_desc_disabled:after {
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        display: block;
+        font-family: 'Glyphicons Halflings';
+        opacity: 0.8;
+    }
+
+    /*table.dataTable thead .sorting:after {
+        opacity: 0.2;
+        content: "\e150";
+    }*/
+
+    table.dataTable thead .sorting_asc:after {
+        content: "\e113";
+    }
+
+    table.dataTable thead .sorting_desc:after {
+        content: "\e114";
+    }
+
+    table.dataTable thead .sorting_asc_disabled:after,
+    table.dataTable thead .sorting_desc_disabled:after {
+        color: #eee;
+    }
+
+div.dataTables_scrollHead table.dataTable {
+    margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollBody table {
+    border-top: none;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+    div.dataTables_scrollBody table thead .sorting:after,
+    div.dataTables_scrollBody table thead .sorting_asc:after,
+    div.dataTables_scrollBody table thead .sorting_desc:after {
+        display: none;
+    }
+
+    div.dataTables_scrollBody table tbody tr:first-child th,
+    div.dataTables_scrollBody table tbody tr:first-child td {
+        border-top: none;
+    }
+
+div.dataTables_scrollFoot table {
+    margin-top: 0 !important;
+    border-top: none;
+}
+
+@media screen and (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_length,
+    div.dataTables_wrapper div.dataTables_filter,
+    div.dataTables_wrapper div.dataTables_info,
+    div.dataTables_wrapper div.dataTables_paginate {
+        text-align: center;
+    }
+}
+
+table.dataTable.table-condensed > thead > tr > th {
+    padding-right: 20px;
+}
+
+table.dataTable.table-condensed .sorting:after,
+table.dataTable.table-condensed .sorting_asc:after,
+table.dataTable.table-condensed .sorting_desc:after {
+    top: 6px;
+    right: 5px;
+}
+
+table.table-bordered.dataTable,
+table.table-bordered.dataTable {
+    border-right-width: 0;
+}
+
+    table.table-bordered.dataTable th,
+    table.table-bordered.dataTable td {
+        border-left-width: 0;
+    }
+    /*table.table-bordered.dataTable th:last-child, 
+table.table-bordered.dataTable td:last-child {
+  border-right-width: 0;
+}*/
+    table.table-bordered.dataTable tbody th,
+    table.table-bordered.dataTable tbody td {
+        border-bottom-width: 0;
+    }
+
+div.dataTables_scrollHead table.table-bordered {
+    border-bottom-width: 0;
+}
+
+div.table-responsive > div.dataTables_wrapper > div.row {
+    margin: 0;
+}
+
+    div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:first-child {
+        padding-left: 0;
+    }
+
+    div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
+        padding-right: 0;
+    }
+
+.table-container > .clearfix {
+    background-color: #fff;
+}
+
+.fixed-table-pagination {
+    margin: 5px 10px;
+}
+/**** bootstrap.datatable 样式  end ******/
+
+/**** jquery.datatable 样式  start ******/
+.center {
+    text-align: center;
+}
+
+td.details-control {
+    background: transparent url("img/details_open.png") no-repeat scroll center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: transparent url("img/details_close.png") no-repeat scroll center center;
+}
+
+div.dataTables_wrapper div.dataTables_length {
+    float: left;
+    padding-left: 20px;
+    line-height: 32px;
+}
+
+div.dt-buttons {
+    float: right !important;
+    padding-top: 2px;
+}
+
+.tables-footer {
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 2px 8px 10px;
+    /*border: 1px solid #ddd;
+    background-color: #f5f7fa;*/
+    border-top: 0px;
+}
+
+.dataTables_scrollBody {
+    background-color: #f9f9f9;
+}
+
+/*表格当前排序字段，颜色加亮显示*/
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc {
+    color: black !important;
+}
+
+table.dataTable thead > tr > th {
+    font-weight: normal;
+}
+
+table.dataTable .label {
+    font-weight: normal;
+}
+
+table.dataTable > thead > tr,
+table.dataTable > tbody > tr {
+    height: 42px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 4px 10px;
+    vertical-align: middle;
+}
+
+.fixedHeader-floating{
+    z-index: 20;
+}
+
+/**** jquery.datatable 样式  end ******/

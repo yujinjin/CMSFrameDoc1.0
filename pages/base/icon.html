@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>icon 图标</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <style type="text/css">
+			.row .font-container{
+    			cursor: pointer;
+			    line-height: 40px;
+			    height: 35px;
+			    -webkit-border-radius: 6px;
+			    -moz-border-radius: 6px;
+			    border-radius: 6px;
+			}
+			
+			.row .font-container [class^="fa"], .row .font-container [class^="glyphicon"]{
+    			width: 32px;
+    			font-size: 14px;
+			}
+			
+			.row .font-container:hover {
+    			background-color: #fbf4f4;
+			}
+		
+			.row .font-container:hover [class^="fa"]:before, .row .font-container:hover [class^="glyphicon"]:before{
+			    font-size: 28px;
+			    vertical-align: -5px;
+			}
+			
+			.font-name {
+				font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    			font-size: 14px;
+    			color: #333;
+    			overflow: hidden;
+  				text-overflow: ellipsis;
+  				white-space: nowrap;
+  				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>font awesome字体</h2>
+					</div>
+					<p class="lead">4.4新增的字体</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-500px"></i><span>fa-500px</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-amazon"></i><span>fa-amazon</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-balance-scale"></i><span>fa-balance-scale</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-0"></i><span>fa-battery-0</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-1"></i><span>fa-battery-1</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-2"></i><span>fa-battery-2</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-3"></i><span>fa-battery-3</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-4"></i><span>fa-battery-4</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-empty"></i><span>fa-battery-empty</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-full"></i><span>fa-battery-full</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-half"></i><span>fa-battery-half</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-quarter"></i><span>fa-battery-quarter</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-three-quarters"></i><span>fa-battery-three-quarters</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-black-tie"></i><span>fa-black-tie</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-check-o"></i><span>fa-calendar-check-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-minus-o"></i><span>fa-calendar-minus-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-plus-o"></i><span>fa-calendar-plus-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-times-o"></i><span>fa-calendar-times-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-diners-club"></i><span>fa-cc-diners-club</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-jcb"></i><span>fa-cc-jcb</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chrome"></i><span>fa-chrome</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-clone"></i><span>fa-clone</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-commenting"></i><span>fa-commenting</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-commenting-o"></i><span>fa-commenting-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-contao"></i><span>fa-contao</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-creative-commons"></i><span>fa-creative-commons</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-expeditedssl"></i><span>fa-expeditedssl</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-firefox"></i><span>fa-firefox</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fonticons"></i><span>fa-fonticons</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-genderless"></i><span>fa-genderless</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-get-pocket"></i><span>fa-get-pocket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg"></i><span>fa-gg</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg-circle"></i><span>fa-gg-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-grab-o"></i><span>fa-hand-grab-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-lizard-o"></i><span>fa-hand-lizard-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-paper-o"></i><span>fa-hand-paper-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-peace-o"></i><span>fa-hand-peace-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-pointer-o"></i><span>fa-hand-pointer-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-rock-o"></i><span>fa-hand-rock-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-scissors-o"></i><span>fa-hand-scissors-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-spock-o"></i><span>fa-hand-spock-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-stop-o"></i><span>fa-hand-stop-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass"></i><span>fa-hourglass</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-1"></i><span>fa-hourglass-1</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-2"></i><span>fa-hourglass-2</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-3"></i><span>fa-hourglass-3</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-end"></i><span>fa-hourglass-end</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-half"></i><span>fa-hourglass-half</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-o"></i><span>fa-hourglass-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-start"></i><span>fa-hourglass-start</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-houzz"></i><span>fa-houzz</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-i-cursor"></i><span>fa-i-cursor</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-industry"></i><span>fa-industry</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-internet-explorer"></i><span>fa-internet-explorer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map"></i><span>fa-map</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-o"></i><span>fa-map-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-pin"></i><span>fa-map-pin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-signs"></i><span>fa-map-signs</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mouse-pointer"></i><span>fa-mouse-pointer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-object-group"></i><span>fa-object-group</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-object-ungroup"></i><span>fa-object-ungroup</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-odnoklassniki"></i><span>fa-odnoklassniki</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-odnoklassniki-square"></i><span>fa-odnoklassniki-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-opencart"></i><span>fa-opencart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-opera"></i><span>fa-opera</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-optin-monster"></i><span>fa-optin-monster</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-registered"></i><span>fa-registered</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-safari"></i><span>fa-safari</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sticky-note"></i><span>fa-sticky-note</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sticky-note-o"></i><span>fa-sticky-note-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-television"></i><span>fa-television</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trademark"></i><span>fa-trademark</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tripadvisor"></i><span>fa-tripadvisor</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tv"></i><span>fa-tv</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-vimeo"></i><span>fa-vimeo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wikipedia-w"></i><span>fa-wikipedia-w</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-y-combinator"></i><span>fa-y-combinator</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yc"></i><span>fa-yc</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">适合 Web 应用的图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-adjust"></i><span>fa-adjust</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-anchor"></i><span>fa-anchor</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-archive"></i><span>fa-archive</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-area-chart"></i><span>fa-area-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows"></i><span>fa-arrows</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows-h"></i><span>fa-arrows-h</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows-v"></i><span>fa-arrows-v</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-asterisk"></i><span>fa-asterisk</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-at"></i><span>fa-at</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-automobile"></i><span>fa-automobile</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-balance-scale"></i><span>fa-balance-scale</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ban"></i><span>fa-ban</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bank"></i><span>fa-bank</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bar-chart"></i><span>fa-bar-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bar-chart-o"></i><span>fa-bar-chart-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-barcode"></i><span>fa-barcode</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bars"></i><span>fa-bars</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-0"></i><span>fa-battery-0</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-1"></i><span>fa-battery-1</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-2"></i><span>fa-battery-2</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-3"></i><span>fa-battery-3</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-4"></i><span>fa-battery-4</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-empty"></i><span>fa-battery-empty</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-full"></i><span>fa-battery-full</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-half"></i><span>fa-battery-half</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-quarter"></i><span>fa-battery-quarter</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-battery-three-quarters"></i><span>fa-battery-three-quarters</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bed"></i><span>fa-bed</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-beer"></i><span>fa-beer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bell"></i><span>fa-bell</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bell-o"></i><span>fa-bell-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bell-slash"></i><span>fa-bell-slash</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bell-slash-o"></i><span>fa-bell-slash-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bicycle"></i><span>fa-bicycle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-binoculars"></i><span>fa-binoculars</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-birthday-cake"></i><span>fa-birthday-cake</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bolt"></i><span>fa-bolt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bomb"></i><span>fa-bomb</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-book"></i><span>fa-book</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bookmark"></i><span>fa-bookmark</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bookmark-o"></i><span>fa-bookmark-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-briefcase"></i><span>fa-briefcase</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bug"></i><span>fa-bug</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-building"></i><span>fa-building</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-building-o"></i><span>fa-building-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bullhorn"></i><span>fa-bullhorn</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bullseye"></i><span>fa-bullseye</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bus"></i><span>fa-bus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cab"></i><span>fa-cab</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calculator"></i><span>fa-calculator</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar"></i><span>fa-calendar</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-check-o"></i><span>fa-calendar-check-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-minus-o"></i><span>fa-calendar-minus-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-o"></i><span>fa-calendar-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-plus-o"></i><span>fa-calendar-plus-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-calendar-times-o"></i><span>fa-calendar-times-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-camera"></i><span>fa-camera</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-camera-retro"></i><span>fa-camera-retro</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-car"></i><span>fa-car</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-down"></i><span>fa-caret-square-o-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-left"></i><span>fa-caret-square-o-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-right"></i><span>fa-caret-square-o-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-up"></i><span>fa-caret-square-o-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cart-arrow-down"></i><span>fa-cart-arrow-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cart-plus"></i><span>fa-cart-plus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc"></i><span>fa-cc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-certificate"></i><span>fa-certificate</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check"></i><span>fa-check</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check-circle"></i><span>fa-check-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check-circle-o"></i><span>fa-check-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check-square"></i><span>fa-check-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check-square-o"></i><span>fa-check-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-child"></i><span>fa-child</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle"></i><span>fa-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle-o"></i><span>fa-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle-o-notch"></i><span>fa-circle-o-notch</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle-thin"></i><span>fa-circle-thin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-clock-o"></i><span>fa-clock-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-clone"></i><span>fa-clone</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-close"></i><span>fa-close</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cloud"></i><span>fa-cloud</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cloud-download"></i><span>fa-cloud-download</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cloud-upload"></i><span>fa-cloud-upload</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-code"></i><span>fa-code</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-code-fork"></i><span>fa-code-fork</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-coffee"></i><span>fa-coffee</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cog"></i><span>fa-cog</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cogs"></i><span>fa-cogs</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-comment"></i><span>fa-comment</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-comment-o"></i><span>fa-comment-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-commenting"></i><span>fa-commenting</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-commenting-o"></i><span>fa-commenting-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-comments"></i><span>fa-comments</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-comments-o"></i><span>fa-comments-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-compass"></i><span>fa-compass</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-copyright"></i><span>fa-copyright</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-creative-commons"></i><span>fa-creative-commons</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-credit-card"></i><span>fa-credit-card</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-crop"></i><span>fa-crop</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-crosshairs"></i><span>fa-crosshairs</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cube"></i><span>fa-cube</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cubes"></i><span>fa-cubes</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cutlery"></i><span>fa-cutlery</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dashboard"></i><span>fa-dashboard</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-database"></i><span>fa-database</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-desktop"></i><span>fa-desktop</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-diamond"></i><span>fa-diamond</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dot-circle-o"></i><span>fa-dot-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-download"></i><span>fa-download</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-edit"></i><span>fa-edit</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ellipsis-h"></i><span>fa-ellipsis-h</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ellipsis-v"></i><span>fa-ellipsis-v</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-envelope"></i><span>fa-envelope</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-envelope-o"></i><span>fa-envelope-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-envelope-square"></i><span>fa-envelope-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eraser"></i><span>fa-eraser</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-exchange"></i><span>fa-exchange</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-exclamation"></i><span>fa-exclamation</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-exclamation-circle"></i><span>fa-exclamation-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-exclamation-triangle"></i><span>fa-exclamation-triangle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-external-link"></i><span>fa-external-link</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-external-link-square"></i><span>fa-external-link-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eye"></i><span>fa-eye</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eye-slash"></i><span>fa-eye-slash</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eyedropper"></i><span>fa-eyedropper</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fax"></i><span>fa-fax</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-feed"></i><span>fa-feed</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-female"></i><span>fa-female</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fighter-jet"></i><span>fa-fighter-jet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-archive-o"></i><span>fa-file-archive-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-audio-o"></i><span>fa-file-audio-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-code-o"></i><span>fa-file-code-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-excel-o"></i><span>fa-file-excel-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-image-o"></i><span>fa-file-image-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-movie-o"></i><span>fa-file-movie-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-pdf-o"></i><span>fa-file-pdf-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-photo-o"></i><span>fa-file-photo-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-picture-o"></i><span>fa-file-picture-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-powerpoint-o"></i><span>fa-file-powerpoint-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-sound-o"></i><span>fa-file-sound-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-video-o"></i><span>fa-file-video-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-word-o"></i><span>fa-file-word-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-zip-o"></i><span>fa-file-zip-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-film"></i><span>fa-film</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-filter"></i><span>fa-filter</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fire"></i><span>fa-fire</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fire-extinguisher"></i><span>fa-fire-extinguisher</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flag"></i><span>fa-flag</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flag-checkered"></i><span>fa-flag-checkered</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flag-o"></i><span>fa-flag-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flash"></i><span>fa-flash</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flask"></i><span>fa-flask</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-folder"></i><span>fa-folder</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-folder-o"></i><span>fa-folder-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-folder-open"></i><span>fa-folder-open</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-folder-open-o"></i><span>fa-folder-open-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-frown-o"></i><span>fa-frown-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-futbol-o"></i><span>fa-futbol-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gamepad"></i><span>fa-gamepad</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gavel"></i><span>fa-gavel</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gear"></i><span>fa-gear</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gears"></i><span>fa-gears</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gift"></i><span>fa-gift</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-glass"></i><span>fa-glass</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-globe"></i><span>fa-globe</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-graduation-cap"></i><span>fa-graduation-cap</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-group"></i><span>fa-group</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-grab-o"></i><span>fa-hand-grab-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-lizard-o"></i><span>fa-hand-lizard-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-paper-o"></i><span>fa-hand-paper-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-peace-o"></i><span>fa-hand-peace-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-pointer-o"></i><span>fa-hand-pointer-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-rock-o"></i><span>fa-hand-rock-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-scissors-o"></i><span>fa-hand-scissors-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-spock-o"></i><span>fa-hand-spock-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-stop-o"></i><span>fa-hand-stop-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hdd-o"></i><span>fa-hdd-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-headphones"></i><span>fa-headphones</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heart"></i><span>fa-heart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heart-o"></i><span>fa-heart-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heartbeat"></i><span>fa-heartbeat</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-history"></i><span>fa-history</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-home"></i><span>fa-home</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hotel"></i><span>fa-hotel</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass"></i><span>fa-hourglass</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-1"></i><span>fa-hourglass-1</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-2"></i><span>fa-hourglass-2</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-3"></i><span>fa-hourglass-3</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-end"></i><span>fa-hourglass-end</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-half"></i><span>fa-hourglass-half</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-o"></i><span>fa-hourglass-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hourglass-start"></i><span>fa-hourglass-start</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-i-cursor"></i><span>fa-i-cursor</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-image"></i><span>fa-image</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-inbox"></i><span>fa-inbox</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-industry"></i><span>fa-industry</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-info"></i><span>fa-info</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-info-circle"></i><span>fa-info-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-institution"></i><span>fa-institution</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-key"></i><span>fa-key</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-keyboard-o"></i><span>fa-keyboard-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-language"></i><span>fa-language</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-laptop"></i><span>fa-laptop</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-leaf"></i><span>fa-leaf</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-legal"></i><span>fa-legal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-lemon-o"></i><span>fa-lemon-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-level-down"></i><span>fa-level-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-level-up"></i><span>fa-level-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-life-bouy"></i><span>fa-life-bouy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-life-buoy"></i><span>fa-life-buoy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-life-ring"></i><span>fa-life-ring</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-life-saver"></i><span>fa-life-saver</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-lightbulb-o"></i><span>fa-lightbulb-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-line-chart"></i><span>fa-line-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-location-arrow"></i><span>fa-location-arrow</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-lock"></i><span>fa-lock</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-magic"></i><span>fa-magic</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-magnet"></i><span>fa-magnet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mail-forward"></i><span>fa-mail-forward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mail-reply"></i><span>fa-mail-reply</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mail-reply-all"></i><span>fa-mail-reply-all</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-male"></i><span>fa-male</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map"></i><span>fa-map</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-marker"></i><span>fa-map-marker</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-o"></i><span>fa-map-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-pin"></i><span>fa-map-pin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-map-signs"></i><span>fa-map-signs</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-meh-o"></i><span>fa-meh-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-microphone"></i><span>fa-microphone</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-microphone-slash"></i><span>fa-microphone-slash</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus"></i><span>fa-minus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus-circle"></i><span>fa-minus-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus-square"></i><span>fa-minus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus-square-o"></i><span>fa-minus-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mobile"></i><span>fa-mobile</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mobile-phone"></i><span>fa-mobile-phone</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-money"></i><span>fa-money</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-moon-o"></i><span>fa-moon-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mortar-board"></i><span>fa-mortar-board</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-motorcycle"></i><span>fa-motorcycle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mouse-pointer"></i><span>fa-mouse-pointer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-music"></i><span>fa-music</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-navicon"></i><span>fa-navicon</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-newspaper-o"></i><span>fa-newspaper-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-object-group"></i><span>fa-object-group</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-object-ungroup"></i><span>fa-object-ungroup</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paint-brush"></i><span>fa-paint-brush</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paper-plane"></i><span>fa-paper-plane</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paper-plane-o"></i><span>fa-paper-plane-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paw"></i><span>fa-paw</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pencil"></i><span>fa-pencil</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pencil-square"></i><span>fa-pencil-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pencil-square-o"></i><span>fa-pencil-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-phone"></i><span>fa-phone</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-phone-square"></i><span>fa-phone-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-photo"></i><span>fa-photo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-picture-o"></i><span>fa-picture-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pie-chart"></i><span>fa-pie-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plane"></i><span>fa-plane</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plug"></i><span>fa-plug</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus"></i><span>fa-plus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-circle"></i><span>fa-plus-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-square"></i><span>fa-plus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-square-o"></i><span>fa-plus-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-power-off"></i><span>fa-power-off</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-print"></i><span>fa-print</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-puzzle-piece"></i><span>fa-puzzle-piece</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-qrcode"></i><span>fa-qrcode</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-question"></i><span>fa-question</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-question-circle"></i><span>fa-question-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-quote-left"></i><span>fa-quote-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-quote-right"></i><span>fa-quote-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-random"></i><span>fa-random</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-recycle"></i><span>fa-recycle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-refresh"></i><span>fa-refresh</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-registered"></i><span>fa-registered</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-remove"></i><span>fa-remove</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-reorder"></i><span>fa-reorder</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-reply"></i><span>fa-reply</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-reply-all"></i><span>fa-reply-all</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-retweet"></i><span>fa-retweet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-road"></i><span>fa-road</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rocket"></i><span>fa-rocket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rss"></i><span>fa-rss</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rss-square"></i><span>fa-rss-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-search"></i><span>fa-search</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-search-minus"></i><span>fa-search-minus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-search-plus"></i><span>fa-search-plus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-send"></i><span>fa-send</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-send-o"></i><span>fa-send-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-server"></i><span>fa-server</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share"></i><span>fa-share</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-alt"></i><span>fa-share-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-alt-square"></i><span>fa-share-alt-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-square"></i><span>fa-share-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-square-o"></i><span>fa-share-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-shield"></i><span>fa-shield</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ship"></i><span>fa-ship</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-shopping-cart"></i><span>fa-shopping-cart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sign-in"></i><span>fa-sign-in</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sign-out"></i><span>fa-sign-out</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-signal"></i><span>fa-signal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sitemap"></i><span>fa-sitemap</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sliders"></i><span>fa-sliders</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-smile-o"></i><span>fa-smile-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-soccer-ball-o"></i><span>fa-soccer-ball-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort"></i><span>fa-sort</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-alpha-asc"></i><span>fa-sort-alpha-asc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-alpha-desc"></i><span>fa-sort-alpha-desc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-amount-asc"></i><span>fa-sort-amount-asc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-amount-desc"></i><span>fa-sort-amount-desc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-asc"></i><span>fa-sort-asc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-desc"></i><span>fa-sort-desc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-down"></i><span>fa-sort-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-numeric-asc"></i><span>fa-sort-numeric-asc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-numeric-desc"></i><span>fa-sort-numeric-desc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sort-up"></i><span>fa-sort-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-space-shuttle"></i><span>fa-space-shuttle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-spinner"></i><span>fa-spinner</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-spoon"></i><span>fa-spoon</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-square"></i><span>fa-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-square-o"></i><span>fa-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star"></i><span>fa-star</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star-half"></i><span>fa-star-half</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star-half-empty"></i><span>fa-star-half-empty</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star-half-full"></i><span>fa-star-half-full</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star-half-o"></i><span>fa-star-half-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-star-o"></i><span>fa-star-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sticky-note"></i><span>fa-sticky-note</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sticky-note-o"></i><span>fa-sticky-note-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-street-view"></i><span>fa-street-view</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-suitcase"></i><span>fa-suitcase</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sun-o"></i><span>fa-sun-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-support"></i><span>fa-support</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tablet"></i><span>fa-tablet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tachometer"></i><span>fa-tachometer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tag"></i><span>fa-tag</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tags"></i><span>fa-tags</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tasks"></i><span>fa-tasks</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-taxi"></i><span>fa-taxi</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-television"></i><span>fa-television</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-terminal"></i><span>fa-terminal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-thumb-tack"></i><span>fa-thumb-tack</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-thumbs-down"></i><span>fa-thumbs-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-thumbs-o-down"></i><span>fa-thumbs-o-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-thumbs-o-up"></i><span>fa-thumbs-o-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-thumbs-up"></i><span>fa-thumbs-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ticket"></i><span>fa-ticket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-times"></i><span>fa-times</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-times-circle"></i><span>fa-times-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-times-circle-o"></i><span>fa-times-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tint"></i><span>fa-tint</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-down"></i><span>fa-toggle-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-left"></i><span>fa-toggle-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-off"></i><span>fa-toggle-off</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-on"></i><span>fa-toggle-on</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-right"></i><span>fa-toggle-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-up"></i><span>fa-toggle-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trademark"></i><span>fa-trademark</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trash"></i><span>fa-trash</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trash-o"></i><span>fa-trash-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tree"></i><span>fa-tree</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trophy"></i><span>fa-trophy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-truck"></i><span>fa-truck</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tty"></i><span>fa-tty</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tv"></i><span>fa-tv</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-umbrella"></i><span>fa-umbrella</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-university"></i><span>fa-university</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-unlock"></i><span>fa-unlock</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-unlock-alt"></i><span>fa-unlock-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-unsorted"></i><span>fa-unsorted</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-upload"></i><span>fa-upload</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-user"></i><span>fa-user</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-user-plus"></i><span>fa-user-plus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-user-secret"></i><span>fa-user-secret</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-user-times"></i><span>fa-user-times</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-users"></i><span>fa-users</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-video-camera"></i><span>fa-video-camera</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-volume-down"></i><span>fa-volume-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-volume-off"></i><span>fa-volume-off</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-volume-up"></i><span>fa-volume-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-warning"></i><span>fa-warning</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wheelchair"></i><span>fa-wheelchair</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wifi"></i><span>fa-wifi</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wrench"></i><span>fa-wrench</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">适合交通运输应用的图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-ambulance"></i><span>fa-ambulance</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-automobile"></i><span>fa-automobile</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bicycle"></i><span>fa-bicycle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bus"></i><span>fa-bus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cab"></i><span>fa-cab</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-car"></i><span>fa-car</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fighter-jet"></i><span>fa-fighter-jet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-motorcycle"></i><span>fa-motorcycle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plane"></i><span>fa-plane</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rocket"></i><span>fa-rocket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ship"></i><span>fa-ship</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-space-shuttle"></i><span>fa-space-shuttle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-subway"></i><span>fa-subway</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-taxi"></i><span>fa-taxi</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-train"></i><span>fa-train</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-truck"></i><span>fa-truck</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wheelchair"></i><span>fa-wheelchair</span></div>
+							</div>
+							
+						</div>
+					</div>
+					<p class="lead">适合性别应用的图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-genderless"></i><span>fa-genderless</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-intersex"></i><span>fa-intersex</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mars"></i><span>fa-mars</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mars-double"></i><span>fa-mars-double</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mars-stroke"></i><span>fa-mars-stroke</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mars-stroke-h"></i><span>fa-mars-stroke-h</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mars-stroke-v"></i><span>fa-mars-stroke-v</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-mercury"></i><span>fa-mercury</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-neuter"></i><span>fa-neuter</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-transgender"></i><span>fa-transgender</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-transgender-alt"></i><span>fa-transgender-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-venus"></i><span>fa-venus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-venus-double"></i><span>fa-venus-double</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-venus-mars"></i><span>fa-venus-mars</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">适合文件系统应用的图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-file"></i><span>fa-file</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-archive-o"></i><span>fa-file-archive-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-audio-o"></i><span>fa-file-audio-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-code-o"></i><span>fa-file-code-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-excel-o"></i><span>fa-file-excel-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-image-o"></i><span>fa-file-image-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-movie-o"></i><span>fa-file-movie-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-o"></i><span>fa-file-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-pdf-o"></i><span>fa-file-pdf-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-photo-o"></i><span>fa-file-photo-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-picture-o"></i><span>fa-file-picture-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-powerpoint-o"></i><span>fa-file-powerpoint-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-sound-o"></i><span>fa-file-sound-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-text"></i><span>fa-file-text</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-text-o"></i><span>fa-file-text-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-video-o"></i><span>fa-file-video-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-word-o"></i><span>fa-file-word-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-zip-o"></i><span>fa-file-zip-o</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">旋转图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-circle-o-notch"></i><span>fa-circle-o-notch</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cog"></i><span>fa-cog</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gear"></i><span>fa-gear</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-refresh"></i><span>fa-refresh</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-spinner"></i><span>fa-spinner</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">表单控制图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-check-square"></i><span>fa-check-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-check-square-o"></i><span>fa-check-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle"></i><span>fa-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-circle-o"></i><span>fa-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dot-circle-o"></i><span>fa-dot-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus-square"></i><span>fa-minus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-minus-square-o"></i><span>fa-minus-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-square"></i><span>fa-plus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-square-o"></i><span>fa-plus-square-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-square"></i><span>fa-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-square-o"></i><span>fa-square-o</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">付款图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-cc-amex"></i><span>fa-cc-amex</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-diners-club"></i><span>fa-cc-diners-club</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-discover"></i><span>fa-cc-discover</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-jcb"></i><span>fa-cc-jcb</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-mastercard"></i><span>fa-cc-mastercard</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-paypal"></i><span>fa-cc-paypal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-stripe"></i><span>fa-cc-stripe</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-visa"></i><span>fa-cc-visa</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-credit-card"></i><span>fa-credit-card</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-google-wallet"></i><span>fa-google-wallet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paypal"></i><span>fa-paypal</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">统计报表图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-area-chart"></i><span>fa-area-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bar-chart"></i><span>fa-bar-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bar-chart-o"></i><span>fa-bar-chart-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-line-chart"></i><span>fa-line-chart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pie-chart"></i><span>fa-pie-chart</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">货币图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-bitcoin"></i><span>fa-bitcoin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-btc"></i><span>fa-btc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cny"></i><span>fa-cny</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dollar"></i><span>fa-dollar</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eur"></i><span>fa-eur</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-euro"></i><span>fa-euro</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gbp"></i><span>fa-gbp</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg"></i><span>fa-gg</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg-circle"></i><span>fa-gg-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ils"></i><span>fa-ils</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-inr"></i><span>fa-inr</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-jpy"></i><span>fa-jpy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-krw"></i><span>fa-krw</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-money"></i><span>fa-money</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rmb"></i><span>fa-rmb</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rouble"></i><span>fa-rouble</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rub"></i><span>fa-rub</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ruble"></i><span>fa-ruble</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rupee"></i><span>fa-rupee</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-shekel"></i><span>fa-shekel</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sheqel"></i><span>fa-sheqel</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-try"></i><span>fa-try</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-turkish-lira"></i><span>fa-turkish-lira</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-usd"></i><span>fa-usd</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-won"></i><span>fa-won</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yen"></i><span>fa-yen</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">文本编辑器图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-align-center"></i><span>fa-align-center</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-align-justify"></i><span>fa-align-justify</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-align-left"></i><span>fa-align-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-align-right"></i><span>fa-align-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bold"></i><span>fa-bold</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chain"></i><span>fa-chain</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chain-broken"></i><span>fa-chain-broken</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-clipboard"></i><span>fa-clipboard</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-columns"></i><span>fa-columns</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-copy"></i><span>fa-copy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cut"></i><span>fa-cut</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dedent"></i><span>fa-dedent</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eraser"></i><span>fa-eraser</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file"></i><span>fa-file</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-o"></i><span>fa-file-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-text"></i><span>fa-file-text</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-file-text-o"></i><span>fa-file-text-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-files-o"></i><span>fa-files-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-floppy-o"></i><span>fa-floppy-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-font"></i><span>fa-font</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-header"></i><span>fa-header</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-indent"></i><span>fa-indent</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-italic"></i><span>fa-italic</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-link"></i><span>fa-link</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-list"></i><span>fa-list</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-list-alt"></i><span>fa-list-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-list-ol"></i><span>fa-list-ol</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-list-ul"></i><span>fa-list-ul</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-outdent"></i><span>fa-outdent</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paperclip"></i><span>fa-paperclip</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paragraph"></i><span>fa-paragraph</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paste"></i><span>fa-paste</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-repeat"></i><span>fa-repeat</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rotate-left"></i><span>fa-rotate-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rotate-right"></i><span>fa-rotate-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-save"></i><span>fa-save</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-scissors"></i><span>fa-scissors</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-strikethrough"></i><span>fa-strikethrough</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-subscript"></i><span>fa-subscript</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-superscript"></i><span>fa-superscript</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-table"></i><span>fa-table</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-text-height"></i><span>fa-text-height</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-text-width"></i><span>fa-text-width</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-th"></i><span>fa-th</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-th-large"></i><span>fa-th-large</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-th-list"></i><span>fa-th-list</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-underline"></i><span>fa-underline</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-undo"></i><span>fa-undo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-unlink"></i><span>fa-unlink</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">指示方向的图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-angle-double-down"></i><span>fa-angle-double-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-double-left"></i><span>fa-angle-double-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-double-right"></i><span>fa-angle-double-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-double-up"></i><span>fa-angle-double-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-down"></i><span>fa-angle-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-left"></i><span>fa-angle-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-right"></i><span>fa-angle-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angle-up"></i><span>fa-angle-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-down"></i><span>fa-arrow-circle-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-left"></i><span>fa-arrow-circle-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-o-down"></i><span>fa-arrow-circle-o-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-o-left"></i><span>fa-arrow-circle-o-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-o-right"></i><span>fa-arrow-circle-o-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-o-up"></i><span>fa-arrow-circle-o-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-right"></i><span>fa-arrow-circle-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-circle-up"></i><span>fa-arrow-circle-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-down"></i><span>fa-arrow-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-left"></i><span>fa-arrow-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-right"></i><span>fa-arrow-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrow-up"></i><span>fa-arrow-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows"></i><span>fa-arrows</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows-alt"></i><span>fa-arrows-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows-h"></i><span>fa-arrows-h</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-arrows-v"></i><span>fa-arrows-v</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-down"></i><span>fa-caret-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-left"></i><span>fa-caret-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-right"></i><span>fa-caret-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-down"></i><span>fa-caret-square-o-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-left"></i><span>fa-caret-square-o-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-right"></i><span>fa-caret-square-o-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-square-o-up"></i><span>fa-caret-square-o-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-caret-up"></i><span>fa-caret-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-circle-down"></i><span>fa-chevron-circle-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-circle-left"></i><span>fa-chevron-circle-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-circle-right"></i><span>fa-chevron-circle-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-circle-up"></i><span>fa-chevron-circle-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-down"></i><span>fa-chevron-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-left"></i><span>fa-chevron-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-right"></i><span>fa-chevron-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chevron-up"></i><span>fa-chevron-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-exchange"></i><span>fa-exchange</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-o-down"></i><span>fa-hand-o-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-o-left"></i><span>fa-hand-o-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-o-right"></i><span>fa-hand-o-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hand-o-up"></i><span>fa-hand-o-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-long-arrow-down"></i><span>fa-long-arrow-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-long-arrow-left"></i><span>fa-long-arrow-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-long-arrow-right"></i><span>fa-long-arrow-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-long-arrow-up"></i><span>fa-long-arrow-up</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-down"></i><span>fa-toggle-down</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-left"></i><span>fa-toggle-left</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-right"></i><span>fa-toggle-right</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-toggle-up"></i><span>fa-toggle-up</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">视频播放器图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-backward"></i><span>fa-backward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-compress"></i><span>fa-compress</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-eject"></i><span>fa-eject</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-expand"></i><span>fa-expand</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fast-backward"></i><span>fa-fast-backward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fast-forward"></i><span>fa-fast-forward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-forward"></i><span>fa-forward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pause"></i><span>fa-pause</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-play"></i><span>fa-play</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-play-circle"></i><span>fa-play-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-play-circle-o"></i><span>fa-play-circle-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-random"></i><span>fa-random</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-step-backward"></i><span>fa-step-backward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-step-forward"></i><span>fa-step-forward</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stop"></i><span>fa-stop</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-youtube-play"></i><span>fa-youtube-play</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">知名品牌图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-500px"></i><span>fa-500px</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-adn"></i><span>fa-adn</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-amazon"></i><span>fa-amazon</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-android"></i><span>fa-android</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-angellist"></i><span>fa-angellist</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-apple"></i><span>fa-apple</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-behance"></i><span>fa-behance</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-behance-square"></i><span>fa-behance-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bitbucket"></i><span>fa-bitbucket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bitbucket-square"></i><span>fa-bitbucket-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-bitcoin"></i><span>fa-bitcoin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-black-tie"></i><span>fa-black-tie</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-btc"></i><span>fa-btc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-buysellads"></i><span>fa-buysellads</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-amex"></i><span>fa-cc-amex</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-diners-club"></i><span>fa-cc-diners-club</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-discover"></i><span>fa-cc-discover</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-jcb"></i><span>fa-cc-jcb</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-mastercard"></i><span>fa-cc-mastercard</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-paypal"></i><span>fa-cc-paypal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-stripe"></i><span>fa-cc-stripe</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-cc-visa"></i><span>fa-cc-visa</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-chrome"></i><span>fa-chrome</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-codepen"></i><span>fa-codepen</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-connectdevelop"></i><span>fa-connectdevelop</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-contao"></i><span>fa-contao</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-css3"></i><span>fa-css3</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dashcube"></i><span>fa-dashcube</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-delicious"></i><span>fa-delicious</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-deviantart"></i><span>fa-deviantart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-digg"></i><span>fa-digg</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dribbble"></i><span>fa-dribbble</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-dropbox"></i><span>fa-dropbox</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-drupal"></i><span>fa-drupal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-empire"></i><span>fa-empire</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-expeditedssl"></i><span>fa-expeditedssl</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-facebook"></i><span>fa-facebook</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-facebook-f"></i><span>fa-facebook-f</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-facebook-official"></i><span>fa-facebook-official</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-facebook-square"></i><span>fa-facebook-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-firefox"></i><span>fa-firefox</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-flickr"></i><span>fa-flickr</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-fonticons"></i><span>fa-fonticons</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-forumbee"></i><span>fa-forumbee</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-foursquare"></i><span>fa-foursquare</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ge"></i><span>fa-ge</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-get-pocket"></i><span>fa-get-pocket</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg"></i><span>fa-gg</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gg-circle"></i><span>fa-gg-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-git"></i><span>fa-git</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-git-square"></i><span>fa-git-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-github"></i><span>fa-github</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-github-alt"></i><span>fa-github-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-github-square"></i><span>fa-github-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gittip"></i><span>fa-gittip</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-google"></i><span>fa-google</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-google-plus"></i><span>fa-google-plus</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-google-plus-square"></i><span>fa-google-plus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-google-wallet"></i><span>fa-google-wallet</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-gratipay"></i><span>fa-gratipay</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hacker-news"></i><span>fa-hacker-news</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-houzz"></i><span>fa-houzz</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-html5"></i><span>fa-html5</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-instagram"></i><span>fa-instagram</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-internet-explorer"></i><span>fa-internet-explorer</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ioxhost"></i><span>fa-ioxhost</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-joomla"></i><span>fa-joomla</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-jsfiddle"></i><span>fa-jsfiddle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-lastfm"></i><span>fa-lastfm</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-lastfm-square"></i><span>fa-lastfm-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-leanpub"></i><span>fa-leanpub</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-linkedin"></i><span>fa-linkedin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-linkedin-square"></i><span>fa-linkedin-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-linux"></i><span>fa-linux</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-maxcdn"></i><span>fa-maxcdn</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-meanpath"></i><span>fa-meanpath</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-medium"></i><span>fa-medium</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-odnoklassniki"></i><span>fa-odnoklassniki</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-odnoklassniki-square"></i><span>fa-odnoklassniki-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-opencart"></i><span>fa-opencart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-openid"></i><span>fa-openid</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-opera"></i><span>fa-opera</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-optin-monster"></i><span>fa-optin-monster</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pagelines"></i><span>fa-pagelines</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-paypal"></i><span>fa-paypal</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pied-piper"></i><span>fa-pied-piper</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pied-piper-alt"></i><span>fa-pied-piper-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pinterest"></i><span>fa-pinterest</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pinterest-p"></i><span>fa-pinterest-p</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-pinterest-square"></i><span>fa-pinterest-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-qq"></i><span>fa-qq</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-ra"></i><span>fa-ra</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-rebel"></i><span>fa-rebel</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-reddit"></i><span>fa-reddit</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-reddit-square"></i><span>fa-reddit-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-renren"></i><span>fa-renren</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-safari"></i><span>fa-safari</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-sellsy"></i><span>fa-sellsy</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-alt"></i><span>fa-share-alt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-share-alt-square"></i><span>fa-share-alt-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-shirtsinbulk"></i><span>fa-shirtsinbulk</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-simplybuilt"></i><span>fa-simplybuilt</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-skyatlas"></i><span>fa-skyatlas</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-skype"></i><span>fa-skype</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-slack"></i><span>fa-slack</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-slideshare"></i><span>fa-slideshare</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-soundcloud"></i><span>fa-soundcloud</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-spotify"></i><span>fa-spotify</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stack-exchange"></i><span>fa-stack-exchange</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stack-overflow"></i><span>fa-stack-overflow</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-steam"></i><span>fa-steam</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-steam-square"></i><span>fa-steam-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stumbleupon"></i><span>fa-stumbleupon</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stumbleupon-circle"></i><span>fa-stumbleupon-circle</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tencent-weibo"></i><span>fa-tencent-weibo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-trello"></i><span>fa-trello</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tripadvisor"></i><span>fa-tripadvisor</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tumblr"></i><span>fa-tumblr</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-tumblr-square"></i><span>fa-tumblr-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-twitch"></i><span>fa-twitch</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-twitter"></i><span>fa-twitter</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-twitter-square"></i><span>fa-twitter-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-viacoin"></i><span>fa-viacoin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-vimeo"></i><span>fa-vimeo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-vimeo-square"></i><span>fa-vimeo-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-vine"></i><span>fa-vine</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-vk"></i><span>fa-vk</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wechat"></i><span>fa-wechat</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-weibo"></i><span>fa-weibo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-weixin"></i><span>fa-weixin</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-whatsapp"></i><span>fa-whatsapp</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wikipedia-w"></i><span>fa-wikipedia-w</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-windows"></i><span>fa-windows</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wordpress"></i><span>fa-wordpress</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-xing"></i><span>fa-xing</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-xing-square"></i><span>fa-xing-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-y-combinator"></i><span>fa-y-combinator</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-y-combinator-square"></i><span>fa-y-combinator-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yahoo"></i><span>fa-yahoo</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yc"></i><span>fa-yc</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yc-square"></i><span>fa-yc-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-yelp"></i><span>fa-yelp</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-youtube"></i><span>fa-youtube</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-youtube-play"></i><span>fa-youtube-play</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-youtube-square"></i><span>fa-youtube-square</span></div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">医疗图标</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="fa fa-ambulance"></i><span>fa-ambulance</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-h-square"></i><span>fa-h-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heart"></i><span>fa-heart</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heart-o"></i><span>fa-heart-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-heartbeat"></i><span>fa-heartbeat</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-hospital-o"></i><span>fa-hospital-o</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-medkit"></i><span>fa-medkit</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-plus-square"></i><span>fa-plus-square</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-stethoscope"></i><span>fa-stethoscope</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-user-md"></i><span>fa-user-md</span></div>
+								<div class="col-md-4 font-container"><i class="fa fa-wheelchair"></i><span>fa-wheelchair</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="page-header">
+						<h2>bootstrap glyphicons字体</h2>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-asterisk"></i><span>glyphicon-asterisk</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-plus"></i><span>glyphicon-plus</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-euro"></i><span>glyphicon-euro</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-eur"></i><span>glyphicon-eur</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-minus"></i><span>glyphicon-minus</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cloud"></i><span>glyphicon-cloud</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-envelope"></i><span>glyphicon-envelope</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-pencil"></i><span>glyphicon-pencil</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-glass"></i><span>glyphicon-glass</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-music"></i><span>glyphicon-music</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-search"></i><span>glyphicon-search</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-heart"></i><span>glyphicon-heart</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-star"></i><span>glyphicon-star</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-star-empty"></i><span>glyphicon-star-empty</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-user"></i><span>glyphicon-user</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-film"></i><span>glyphicon-film</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-th-large"></i><span>glyphicon-th-large</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-th"></i><span>glyphicon-th</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-th-list"></i><span>glyphicon-th-list</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ok"></i><span>glyphicon-ok</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-remove"></i><span>glyphicon-remove</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-zoom-in"></i><span>glyphicon-zoom-in</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-zoom-out"></i><span>glyphicon-zoom-out</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-off"></i><span>glyphicon-off</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-signal"></i><span>glyphicon-signal</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cog"></i><span>glyphicon-cog</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-trash"></i><span>glyphicon-trash</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-home"></i><span>glyphicon-home</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-file"></i><span>glyphicon-file</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-time"></i><span>glyphicon-time</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-road"></i><span>glyphicon-road</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-download-alt"></i><span>glyphicon-download-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-download"></i><span>glyphicon-download</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-upload"></i><span>glyphicon-upload</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-inbox"></i><span>glyphicon-inbox</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-play-circle"></i><span>glyphicon-play-circle</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-repeat"></i><span>glyphicon-repeat</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-refresh"></i><span>glyphicon-refresh</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-list-alt"></i><span>glyphicon-list-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-lock"></i><span>glyphicon-lock</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-flag"></i><span>glyphicon-flag</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-headphones"></i><span>glyphicon-headphones</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-volume-off"></i><span>glyphicon-volume-off</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-volume-down"></i><span>glyphicon-volume-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-volume-up"></i><span>glyphicon-volume-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-qrcode"></i><span>glyphicon-qrcode</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-barcode"></i><span>glyphicon-barcode</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tag"></i><span>glyphicon-tag</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tags"></i><span>glyphicon-tags</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-book"></i><span>glyphicon-book</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bookmark"></i><span>glyphicon-bookmark</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-print"></i><span>glyphicon-print</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-camera"></i><span>glyphicon-camera</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-font"></i><span>glyphicon-font</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bold"></i><span>glyphicon-bold</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-italic"></i><span>glyphicon-italic</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-text-height"></i><span>glyphicon-text-height</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-text-width"></i><span>glyphicon-text-width</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-align-left"></i><span>glyphicon-align-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-align-center"></i><span>glyphicon-align-center</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-align-right"></i><span>glyphicon-align-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-align-justify"></i><span>glyphicon-align-justify</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-list"></i><span>glyphicon-list</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-indent-left"></i><span>glyphicon-indent-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-indent-right"></i><span>glyphicon-indent-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-facetime-video"></i><span>glyphicon-facetime-video</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-picture"></i><span>glyphicon-picture</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-map-marker"></i><span>glyphicon-map-marker</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-adjust"></i><span>glyphicon-adjust</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tint"></i><span>glyphicon-tint</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-edit"></i><span>glyphicon-edit</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-share"></i><span>glyphicon-share</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-check"></i><span>glyphicon-check</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-move"></i><span>glyphicon-move</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-step-backward"></i><span>glyphicon-step-backward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-fast-backward"></i><span>glyphicon-fast-backward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-backward"></i><span>glyphicon-backward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-play"></i><span>glyphicon-play</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-pause"></i><span>glyphicon-pause</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-stop"></i><span>glyphicon-stop</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-forward"></i><span>glyphicon-forward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-fast-forward"></i><span>glyphicon-fast-forward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-step-forward"></i><span>glyphicon-step-forward</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-eject"></i><span>glyphicon-eject</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-chevron-left"></i><span>glyphicon-chevron-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-chevron-right"></i><span>glyphicon-chevron-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-plus-sign"></i><span>glyphicon-plus-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-minus-sign"></i><span>glyphicon-minus-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-remove-sign"></i><span>glyphicon-remove-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ok-sign"></i><span>glyphicon-ok-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-question-sign"></i><span>glyphicon-question-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-info-sign"></i><span>glyphicon-info-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-screenshot"></i><span>glyphicon-screenshot</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-remove-circle"></i><span>glyphicon-remove-circle</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ok-circle"></i><span>glyphicon-ok-circle</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ban-circle"></i><span>glyphicon-ban-circle</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-arrow-left"></i><span>glyphicon-arrow-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-arrow-right"></i><span>glyphicon-arrow-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-arrow-up"></i><span>glyphicon-arrow-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-arrow-down"></i><span>glyphicon-arrow-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-share-alt"></i><span>glyphicon-share-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-resize-full"></i><span>glyphicon-resize-full</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-resize-small"></i><span>glyphicon-resize-small</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-exclamation-sign"></i><span>glyphicon-exclamation-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-gift"></i><span>glyphicon-gift</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-leaf"></i><span>glyphicon-leaf</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-fire"></i><span>glyphicon-fire</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-eye-open"></i><span>glyphicon-eye-open</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-eye-close"></i><span>glyphicon-eye-close</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-warning-sign"></i><span>glyphicon-warning-sign</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-plane"></i><span>glyphicon-plane</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-calendar"></i><span>glyphicon-calendar</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-random"></i><span>glyphicon-random</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-comment"></i><span>glyphicon-comment</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-magnet"></i><span>glyphicon-magnet</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-chevron-up"></i><span>glyphicon-chevron-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-chevron-down"></i><span>glyphicon-chevron-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-retweet"></i><span>glyphicon-retweet</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-shopping-cart"></i><span>glyphicon-shopping-cart</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-folder-close"></i><span>glyphicon-folder-close</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-folder-open"></i><span>glyphicon-folder-open</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-resize-vertical"></i><span>glyphicon-resize-vertical</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-resize-horizontal"></i><span>glyphicon-resize-horizontal</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hdd"></i><span>glyphicon-hdd</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bullhorn"></i><span>glyphicon-bullhorn</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bell"></i><span>glyphicon-bell</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-certificate"></i><span>glyphicon-certificate</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-thumbs-up"></i><span>glyphicon-thumbs-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-thumbs-down"></i><span>glyphicon-thumbs-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hand-right"></i><span>glyphicon-hand-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hand-left"></i><span>glyphicon-hand-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hand-up"></i><span>glyphicon-hand-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hand-down"></i><span>glyphicon-hand-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-circle-arrow-right"></i><span>glyphicon-circle-arrow-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-circle-arrow-left"></i><span>glyphicon-circle-arrow-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-circle-arrow-up"></i><span>glyphicon-circle-arrow-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-circle-arrow-down"></i><span>glyphicon-circle-arrow-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-globe"></i><span>glyphicon-globe</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-wrench"></i><span>glyphicon-wrench</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tasks"></i><span>glyphicon-tasks</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-filter"></i><span>glyphicon-filter</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-briefcase"></i><span>glyphicon-briefcase</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-fullscreen"></i><span>glyphicon-fullscreen</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-dashboard"></i><span>glyphicon-dashboard</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-paperclip"></i><span>glyphicon-paperclip</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-heart-empty"></i><span>glyphicon-heart-empty</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-link"></i><span>glyphicon-link</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-phone"></i><span>glyphicon-phone</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-pushpin"></i><span>glyphicon-pushpin</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-usd"></i><span>glyphicon-usd</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-gbp"></i><span>glyphicon-gbp</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort"></i><span>glyphicon-sort</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-alphabet"></i><span>glyphicon-sort-by-alphabet</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-alphabet-alt"></i><span>glyphicon-sort-by-alphabet-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-order"></i><span>glyphicon-sort-by-order</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-order-alt"></i><span>glyphicon-sort-by-order-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-attributes"></i><span>glyphicon-sort-by-attributes</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sort-by-attributes-alt"></i><span>glyphicon-sort-by-attributes-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-unchecked"></i><span>glyphicon-unchecked</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-expand"></i><span>glyphicon-expand</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-collapse-down"></i><span>glyphicon-collapse-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-collapse-up"></i><span>glyphicon-collapse-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-log-in"></i><span>glyphicon-log-in</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-flash"></i><span>glyphicon-flash</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-log-out"></i><span>glyphicon-log-out</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-new-window"></i><span>glyphicon-new-window</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-record"></i><span>glyphicon-record</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-save"></i><span>glyphicon-save</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-open"></i><span>glyphicon-open</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-saved"></i><span>glyphicon-saved</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-import"></i><span>glyphicon-import</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-export"></i><span>glyphicon-export</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-send"></i><span>glyphicon-send</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-floppy-disk"></i><span>glyphicon-floppy-disk</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-floppy-saved"></i><span>glyphicon-floppy-saved</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-floppy-remove"></i><span>glyphicon-floppy-remove</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-floppy-save"></i><span>glyphicon-floppy-save</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-floppy-open"></i><span>glyphicon-floppy-open</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-credit-card"></i><span>glyphicon-credit-card</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-transfer"></i><span>glyphicon-transfer</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cutlery"></i><span>glyphicon-cutlery</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-header"></i><span>glyphicon-header</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-compressed"></i><span>glyphicon-compressed</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-earphone"></i><span>glyphicon-earphone</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-phone-alt"></i><span>glyphicon-phone-alt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tower"></i><span>glyphicon-tower</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-stats"></i><span>glyphicon-stats</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sd-video"></i><span>glyphicon-sd-video</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hd-video"></i><span>glyphicon-hd-video</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-subtitles"></i><span>glyphicon-subtitles</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sound-stereo"></i><span>glyphicon-sound-stereo</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sound-dolby"></i><span>glyphicon-sound-dolby</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sound-5-1"></i><span>glyphicon-sound-5-1</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sound-6-1"></i><span>glyphicon-sound-6-1</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sound-7-1"></i><span>glyphicon-sound-7-1</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-copyright-mark"></i><span>glyphicon-copyright-mark</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-registration-mark"></i><span>glyphicon-registration-mark</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cloud-download"></i><span>glyphicon-cloud-download</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cloud-upload"></i><span>glyphicon-cloud-upload</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tree-conifer"></i><span>glyphicon-tree-conifer</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tree-deciduous"></i><span>glyphicon-tree-deciduous</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-cd"></i><span>glyphicon-cd</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-save-file"></i><span>glyphicon-save-file</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-open-file"></i><span>glyphicon-open-file</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-level-up"></i><span>glyphicon-level-up</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-copy"></i><span>glyphicon-copy</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-paste"></i><span>glyphicon-paste</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-alert"></i><span>glyphicon-alert</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-equalizer"></i><span>glyphicon-equalizer</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-king"></i><span>glyphicon-king</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-queen"></i><span>glyphicon-queen</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-pawn"></i><span>glyphicon-pawn</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bishop"></i><span>glyphicon-bishop</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-knight"></i><span>glyphicon-knight</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-baby-formula"></i><span>glyphicon-baby-formula</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-tent"></i><span>glyphicon-tent</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-blackboard"></i><span>glyphicon-blackboard</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bed"></i><span>glyphicon-bed</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-apple"></i><span>glyphicon-apple</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-erase"></i><span>glyphicon-erase</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-hourglass"></i><span>glyphicon-hourglass</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-lamp"></i><span>glyphicon-lamp</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-duplicate"></i><span>glyphicon-duplicate</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-piggy-bank"></i><span>glyphicon-piggy-bank</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-scissors"></i><span>glyphicon-scissors</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-bitcoin"></i><span>glyphicon-bitcoin</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-btc"></i><span>glyphicon-btc</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-xbt"></i><span>glyphicon-xbt</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-yen"></i><span>glyphicon-yen</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-jpy"></i><span>glyphicon-jpy</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ruble"></i><span>glyphicon-ruble</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-rub"></i><span>glyphicon-rub</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-scale"></i><span>glyphicon-scale</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ice-lolly"></i><span>glyphicon-ice-lolly</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-ice-lolly-tasted"></i><span>glyphicon-ice-lolly-tasted</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-education"></i><span>glyphicon-education</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-option-horizontal"></i><span>glyphicon-option-horizontal</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-option-vertical"></i><span>glyphicon-option-vertical</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-menu-hamburger"></i><span>glyphicon-menu-hamburger</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-modal-window"></i><span>glyphicon-modal-window</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-oil"></i><span>glyphicon-oil</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-grain"></i><span>glyphicon-grain</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-sunglasses"></i><span>glyphicon-sunglasses</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-text-size"></i><span>glyphicon-text-size</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-text-color"></i><span>glyphicon-text-color</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-text-background"></i><span>glyphicon-text-background</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-top"></i><span>glyphicon-object-align-top</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-bottom"></i><span>glyphicon-object-align-bottom</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-horizontal"></i><span>glyphicon-object-align-horizontal</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-left"></i><span>glyphicon-object-align-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-vertical"></i><span>glyphicon-object-align-vertical</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-object-align-right"></i><span>glyphicon-object-align-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-triangle-right"></i><span>glyphicon-triangle-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-triangle-left"></i><span>glyphicon-triangle-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-triangle-bottom"></i><span>glyphicon-triangle-bottom</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-triangle-top"></i><span>glyphicon-triangle-top</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-console"></i><span>glyphicon-console</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-superscript"></i><span>glyphicon-superscript</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-subscript"></i><span>glyphicon-subscript</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-menu-left"></i><span>glyphicon-menu-left</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-menu-right"></i><span>glyphicon-menu-right</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-menu-down"></i><span>glyphicon-menu-down</span></div>
+								<div class="col-md-4 font-container"><i class="glyphicon glyphicon-menu-up"></i><span>glyphicon-menu-up</span></div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>input 按钮</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.panel-body {
+    			padding: 40px;
+			}
+	    </style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<p class="lead">常用</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="form-horizontal">
+								<div class="form-group">
+								    <input type="email" class="form-control" placeholder="Email">
+								</div>
+								<div class="form-group">
+							    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+							    	<div class="input-group">
+							      		<div class="input-group-addon">$</div>
+							      		<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+							      		<div class="input-group-addon">.00</div>
+							    	</div>
+							  	</div>
+							  	<div class="form-group">
+							  		<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+							  	</div>
+							  	<div class="form-group has-success">
+								  	<label class="control-label" for="inputSuccess1">Input with success</label>
+								  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+								  	<span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+								</div>
+								<div class="form-group has-warning">
+								  	<label class="control-label" for="inputWarning1">Input with warning</label>
+								  	<input type="text" class="form-control" id="inputWarning1">
+								</div>
+								<div class="form-group has-error">
+								  	<label class="control-label" for="inputError1">Input with error</label>
+								  	<input type="text" class="form-control" id="inputError1">
+								</div>
+								<div class="form-group has-success has-feedback">
+								  	<label class="control-label" for="inputSuccess2">Input with success</label>
+								  	<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+								  	<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+								  	<span id="inputSuccess2Status" class="sr-only">(success)</span>
+								</div>
+								<div class="form-group has-warning has-feedback">
+								  	<label class="control-label" for="inputWarning2">Input with warning</label>
+								  	<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+								  	<span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+								  	<span id="inputWarning2Status" class="sr-only">(warning)</span>
+								</div>
+								<div class="form-group has-error has-feedback">
+								  	<label class="control-label" for="inputError2">Input with error</label>
+								  	<input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+								  	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+								  	<span id="inputError2Status" class="sr-only">(error)</span>
+								</div>
+								<div class="form-group has-success has-feedback">
+							      	<div class="input-group">
+							        	<span class="input-group-addon">@</span>
+							        	<input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
+							      	</div>
+							      	<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+							      	<span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+								</div>
+								<div class="form-group">
+									<input class="form-control input-lg" type="text" placeholder=".input-lg">
+							  	</div>
+							  	<div class="form-group">
+									<input class="form-control" type="text" placeholder="Default input">
+							  	</div>
+							  	<div class="form-group">
+									<input class="form-control input-sm" type="text" placeholder=".input-sm">
+							  	</div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">输入框组</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="form-group">
+								<div class="input-group">
+								  	<span class="input-group-addon" id="basic-addon1">@</span>
+								  	<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+								  	<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+								  	<span class="input-group-addon" id="basic-addon2">@example.com</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+								  	<span class="input-group-addon">$</span>
+								  	<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+								  	<span class="input-group-addon">.00</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="basic-url">Your vanity URL</label>
+								<div class="input-group">
+								  <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+								  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group input-group-lg">
+								  	<span class="input-group-addon" id="sizing-addon1">@</span>
+								  	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+								  	<span class="input-group-addon" id="sizing-addon2">@</span>
+								  	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group input-group-sm">
+								  	<span class="input-group-addon" id="sizing-addon3">@</span>
+								  	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<span class="input-group-addon">
+								        		<input type="checkbox" aria-label="...">
+								      		</span>
+								      		<input type="text" class="form-control" aria-label="...">
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<span class="input-group-addon">
+								        		<input type="radio" aria-label="...">
+								      		</span>
+								      		<input type="text" class="form-control" aria-label="...">
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								</div><!-- /.row -->
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<span class="input-group-btn">
+								        		<button class="btn btn-default" type="button">Go!</button>
+								      		</span>
+								      		<input type="text" class="form-control" placeholder="Search for...">
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<input type="text" class="form-control" placeholder="Search for...">
+								      		<span class="input-group-btn">
+								        		<button class="btn btn-default" type="button">Go!</button>
+								      		</span>
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								</div><!-- /.row -->
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<div class="input-group-btn">
+								        		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+										        <ul class="dropdown-menu">
+										          	<li><a href="#">Action</a></li>
+										          	<li><a href="#">Another action</a></li>
+										          	<li><a href="#">Something else here</a></li>
+										          	<li role="separator" class="divider"></li>
+										          	<li><a href="#">Separated link</a></li>
+										        </ul>
+								      		</div><!-- /btn-group -->
+								      		<input type="text" class="form-control" aria-label="...">
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<input type="text" class="form-control" aria-label="...">
+								      		<div class="input-group-btn">
+									        	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+									        	<ul class="dropdown-menu dropdown-menu-right">
+									          		<li><a href="#">Action</a></li>
+									          		<li><a href="#">Another action</a></li>
+									          		<li><a href="#">Something else here</a></li>
+									          		<li role="separator" class="divider"></li>
+									          		<li><a href="#">Separated link</a></li>
+									        	</ul>
+								      		</div><!-- /btn-group -->
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								</div><!-- /.row -->
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<div class="input-group-btn">
+								      			<button type="button" class="btn btn-default">Action</button>
+								        		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+										        <ul class="dropdown-menu">
+										          	<li><a href="#">Action</a></li>
+										          	<li><a href="#">Another action</a></li>
+										          	<li><a href="#">Something else here</a></li>
+										          	<li role="separator" class="divider"></li>
+										          	<li><a href="#">Separated link</a></li>
+										        </ul>
+								      		</div><!-- /btn-group -->
+								      		<input type="text" class="form-control" aria-label="...">
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								  	<div class="col-lg-6">
+								    	<div class="input-group">
+								      		<input type="text" class="form-control" aria-label="...">
+								      		<div class="input-group-btn">
+								      			<button type="button" class="btn btn-default">Action</button>
+									        	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+									        	<ul class="dropdown-menu dropdown-menu-right">
+									          		<li><a href="#">Action</a></li>
+									          		<li><a href="#">Another action</a></li>
+									          		<li><a href="#">Something else here</a></li>
+									          		<li role="separator" class="divider"></li>
+									          		<li><a href="#">Separated link</a></li>
+									        	</ul>
+								      		</div><!-- /btn-group -->
+								    	</div><!-- /input-group -->
+								  	</div><!-- /.col-lg-6 -->
+								</div><!-- /.row -->
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								  		<div class="input-group">
+								          	<div class="input-group-btn">
+								            	<button type="button" class="btn btn-default" aria-label="Bold"><span class="glyphicon glyphicon-bold"></span></button>
+								            	<button type="button" class="btn btn-default" aria-label="Italic"><span class="glyphicon glyphicon-italic"></span></button>
+								          	</div>
+								          	<input class="form-control" aria-label="Text input with multiple buttons" type="text">
+								        </div>
+								  	</div>
+								  	<div class="col-lg-6">
+								  		<div class="input-group">
+								          	<input class="form-control" aria-label="Text input with multiple buttons" type="text">
+								          	<div class="input-group-btn">
+								            	<button type="button" class="btn btn-default" aria-label="Help"><span class="glyphicon glyphicon-question-sign"></span></button>
+								            	<button type="button" class="btn btn-default">Action</button>
+								          	</div>
+								        </div>
+								  	</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								  	<div class="col-lg-6">
+								  		
+								  	</div>
+								  	<div class="col-lg-6">
+								  		
+								  	</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="关键词" />
+	    <meta name="description" content="描述">
+		<title>grid 栅格</title>
+		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
+		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
+		<link href="../../assets/css/beyond.css" rel="stylesheet" />
+	    <link href="../../assets/css/site.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.row {
+	    		margin-top: 20px;
+	    	}
+	    	
+	    	.row [class^=col-] {
+			    padding-top: 10px;
+			    padding-bottom: 10px;
+			    background-color: #eee;
+			    background-color: rgba(86,61,124,.15);
+			    border: 1px solid #ddd;
+			    border: 1px solid rgba(86,61,124,.2);
+			}
+	    </style>
+	</head>
+	<body>
+		<input type="hidden" value="true" name="loadMenu" />
+		<!-- 资源加载防止白屏 -->
+	    <div class="loading-container hidden">
+	        <div class="loader"></div>
+	    </div>
+	    <div class="navbar navbar-fixed-top fh-fixedHeader">
+		    <div class="navbar-inner"></div>
+		</div>
+	    <!-- Main Container -->
+	    <div class="main-container container-fluid">
+	    	<sidebar></sidebar>
+	        <!-- Page Container -->
+	        <div class="page-container">
+	        	<div class="page-sidebar sidebar-fixed" id="sidebar"></div>
+	            <!-- Page Content -->
+	            <div class="page-content page-body">
+	            	<div class="page-header">
+						<h2>grid 栅格</h2>
+					</div>
+					<p class="lead">Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。它包含了易于使用的预定义类，还有强大的mixin 用于生成更具语义的布局。</p>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row">
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							  	<div class="col-md-1">.col-md-1</div>
+							</div>
+							<div class="row">
+							  	<div class="col-md-8">.col-md-8</div>
+							  	<div class="col-md-4">.col-md-4</div>
+							</div>
+							<div class="row">
+							  	<div class="col-md-4">.col-md-4</div>
+							  	<div class="col-md-4">.col-md-4</div>
+							  	<div class="col-md-4">.col-md-4</div>
+							</div>
+							<div class="row">
+							  	<div class="col-md-6">.col-md-6</div>
+							  	<div class="col-md-6">.col-md-6</div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">移动设备和桌面屏幕</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="row">
+							  	<div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+							  	<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							</div>
+							<div class="row">
+							  	<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							  	<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							  	<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							</div>
+							<div class="row">
+							  	<div class="col-xs-6">.col-xs-6</div>
+							  	<div class="col-xs-6">.col-xs-6</div>
+							</div>
+						</div>
+					</div>
+					<p class="lead">手机、平板、桌面</p>
+					<div class="panel panel-default">
+						<div class="panel-body code">
+							<div class="row">
+							  	<div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+							  	<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+							</div>
+							<div class="row">
+							  	<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+							  	<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+							  	<!-- Optional: clear the XS cols if their content doesn't match in height -->
+							  	<div class="clearfix visible-xs-block"></div>
+							  	<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
+	</body>
+</html>
