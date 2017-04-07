@@ -6,11 +6,11 @@
 var site = site || {};
 //站点配置
 site.config = {
-    contextPath: "/PCFrame1.0", //项目相对路径
+    contextPath: "/CMSFrameDoc1.0", //项目相对路径
     uploadImgServer: "", //图片上传服务
     webapiDomain: "", //项目相对路径
     projectPath: "", //项目全路径
-    resourecePath: "/PCFrame1.0/assets", //资源路径
+    resourecePath: "/CMSFrameDoc1.0/assets", //资源路径
     mobilePath: "", //移动端全路径
     isDebug: true, //前端是否调试模式
     isRelease: (typeof (serverConfig) !== "undefined" ? serverConfig.isRelease : false), //是否发布环境

@@ -334,7 +334,7 @@ define([&quot;siteTable&quot;], function (siteTable) {
 						        <table data-index="6" class="table table-hover table-striped table-bordered" style="width:100%"></table>
 						    </div>
 		            	</div>
-		            	<div class="meta" data-height="380">
+		            	<div class="meta" data-height="450">
 		            		<div class="description">
 		            			<p>对于需要排序的列只需要设置<code>columns</code>中的列设置相应的属性<code>"orderable": true</code>就可以了。</p>
 		            			<p>列表初始化时如果需要设置相应的列排序，需要设置<code>order: [[1, 'asc'], [2, 'desc']]</code>。服务端获取排序的参数格式<code>sorting:orderNo,sendMan desc</code>,各个字段用","隔开升序默认不需要传值"asc"。</p>
@@ -374,7 +374,7 @@ define([&quot;siteTable&quot;], function (siteTable) {
 						        <table data-index="7" class="table table-hover table-striped table-bordered" style="width:100%"></table>
 						    </div>
 		            	</div>
-		            	<div class="meta" data-height="780">
+		            	<div class="meta" data-height="880">
 		            		<div class="description">
 		            			<p>对于需要自定义列只需要设置<code>columns</code>中的列设置相应的属性<code>render</code>,它是一个回调函数，返回html的字符串，传入的参数有data(当前列的data)、type(数据类型 - 有这些值：filter、display、type、sort)、row(整个row的数据)。</p>
 		            			<p>对于自定义列框架提供了几个常用的列有<code>renderColumnBoolean</code>、<code>renderIsActive</code>、<code>renderIsActive2</code>、<code>renderDateTime</code>、<code>renderDatetimeShort</code>、<code>renderDate</code>、<code>renderImage</code>。</p>
@@ -418,6 +418,67 @@ define([&quot;siteTable&quot;], function (siteTable) {
 		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
 		            	</div>
 		           	</div>
+		           	<div class="page-header">
+						<h4>展开行</h4>
+					</div>
+					<p>当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<div class="table-container">
+						        <!-- 过滤条件end -->
+						        <table data-index="8" class="table table-hover table-striped table-bordered" style="width:100%"></table>
+						    </div>
+		            	</div>
+		            	<div class="meta" data-height="950">
+		            		<div class="description">
+		            			<p>设置<code>responsive</code>中属性<code>render</code>,当用到responsive时fixedHeader最好设置为<code>false</code>，因为响应式通常会导致头部错位，对于详情列的内容可以自定义。</p>
+		            			<p>注意：responsive是根据表格的大小自动决定是否显示该详情列，当表格的尺寸足够的大时会自动隐藏。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">define(["siteTable"], function (siteTable) {
+	new siteTable({
+		"columns":  [{ 
+			"data": "id", "title": "ID", "orderable": false, "visible": false 
+		}, {
+    		"data": "id", 
+    		"title": "详情",
+    		"render": function (data, type, row) {
+	      		return '';
+		    }
+       	},..., 
+       	{
+       		"data": "remark", "title": "备注", "visible": true
+       	}],
+       	fixedHeader: false,
+       	responsive: {
+    		details: {
+	            renderer: function ( api, rowIdx, columns ) {
+	                var data = $.map( columns, function ( col, i ) {
+	                    return col.hidden ?
+	                        '&lt;tr data-dt-row=&quot;'+col.rowIndex+'&quot; data-dt-column=&quot;'+col.columnIndex+'&quot;&gt;'+
+	                            '&lt;td&gt;'+col.title+':'+'&lt;/td&gt; '+
+	                            '&lt;td&gt;'+col.data+'&lt;/td&gt;'+
+	                        '&lt;/tr&gt;' :
+	                        '';
+	                }).join('');
+	                return data ? $('&lt;table/&gt;').append( data ) : false;
+	            }
+    		}
+    	},
+    	customerAjax: {
+    		url: site.api.order.queryOrderList
+    	}
+	}, $("table[data-index=7]"));
+});</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	
 		           	<div class="page-header">
 						<h4>Options</h4>
 					</div>

@@ -76,11 +76,6 @@
 		    "url": "/pages/components/select.html",
 		    "icon": "glyphicon glyphicon-tasks"
 		},{
-		    "id": "00305",
-		    "name": "date picker日期选择",
-		    "url": "/pages/components/date-picker.html",
-		    "icon": "glyphicon glyphicon-map-marker"
-		},{
 		    "id": "00306",
 		    "name": "date flatpickr日期选择",
 		    "url": "/pages/components/date-flatpickr.html",

@@ -405,3 +405,15 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .page-body {
 	background: #fff; 
 }
+
+/****************** menu *******************/
+.user-menu span.menu-text{
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.user-menu li.divider{
+	background-color: #e5e5e5 !important;
+}
+
+/****************** menu *******************/

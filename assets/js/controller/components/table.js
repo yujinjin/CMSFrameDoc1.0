@@ -103,7 +103,7 @@ define(["siteTable", "docs"], function (siteTable) {
         	}, $("table[data-index=6]"));
         	var _columns_7 = $.extend(true, [], _this.columns);
         	_columns_7[1].render = function (data, type, row) {
-	      		return '<a href="#">' + data + '</labe>';
+	      		return '<a href="#">' + data + '</a>';
 		    }
         	_columns_7[2].render = function (data, type, row) {
 	      		return '<label class="label label-info">' + data + '</labe>';
@@ -118,6 +118,37 @@ define(["siteTable", "docs"], function (siteTable) {
                     url: site.api.order.queryOrderList
                 }
         	}, $("table[data-index=7]"));
+        	var _columns_8 = $.extend(true, [], _this.columns);
+        	_columns_8.splice(1, 0, {
+        		"data": "id", 
+        		"title": "详情",
+        		"render": function (data, type, row) {
+		      		return '';
+			    }
+        	});
+        	_columns_8[8].visible = true;
+        	new siteTable({
+        		"columns": _columns_8,
+        		fixedHeader: false,
+        		responsive: {
+	        		details: {
+			            renderer: function ( api, rowIdx, columns ) {
+			                var data = $.map( columns, function ( col, i ) {
+			                    return col.hidden ?
+			                        '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+			                            '<td>'+col.title+':'+'</td> '+
+			                            '<td>'+col.data+'</td>'+
+			                        '</tr>' :
+			                        '';
+			                }).join('');
+			                return data ? $('<table/>').append( data ) : false;
+			            }
+	        		}
+	        	},
+        		customerAjax: {
+                    url: site.api.order.queryOrderList
+                }
+        	}, $("table[data-index=8]"));
         }
     }
 	return {
