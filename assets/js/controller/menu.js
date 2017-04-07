@@ -15,19 +15,16 @@ define(["templateManager", "text!../main.tpl.html", "jquery.slimscroll"], functi
         },
 
         initNavbar: function () {
-        	site.ajax({
-                url: site.api.user.queryUserInfo,
+        	site.api.user.queryUserInfo({
                 success: function (data) {
                     $(".navbar-inner").html(templateManager.renderTemplateById("header-tpl", data));
                 }
             });
-			
         },
 
         initSidebar: function () {
         	var _this = this;
-        	site.ajax({
-                url: site.api.user.queryMenus,
+        	site.api.user.queryMenus({
                 success: function (data) {
                     $("#sidebar").html(templateManager.renderTemplateById("sidebar-tpl", data));
                     var $liEL = $("#sidebar").find("a[href='" + site.utils.parseUrl(window.location.href).path + "']").parent("li");

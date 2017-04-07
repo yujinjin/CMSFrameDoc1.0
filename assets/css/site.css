@@ -407,6 +407,11 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 
 /****************** menu *******************/
+.user-menu {
+	width: 160px;
+	min-width: 160px !important;
+}
+
 .user-menu span.menu-text{
 	margin-left: 10px;
 	font-size: 14px;

@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="关键词" />
 	    <meta name="description" content="描述">
-		<title>Alert 警告提示</title>
+		<title>表单验证</title>
 		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
 		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
 		<link href="../../assets/css/beyond.css" rel="stylesheet" />
@@ -29,12 +29,705 @@
 	            <!-- Page Content -->
 	            <div class="page-content page-body">
 	            	<div class="page-header">
-						<h2>Message 全局提示</h2>
+						<h2>form 表单验证</h2>
 					</div>
-					<p class="lead">概述</p>
-					<p></p>
+					<p>form 表单验证是基于jquery的Validate第三方插件做的封装。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能。 本站点的封装重点是针对服务器数据请求让客户端表单验证变得更简单，同时提供了大量的定制选项，满足应用程序各种需求。该插件捆绑了一套有用的验证方法，包括 URL 和电子邮件验证，同时提供了一个用来编写用户自定义方法的 API。</p>
+					<p>其官方地址是：<a href="https://jqueryvalidation.org/" target="_blank">https://jqueryvalidation.org/</a></p>
+					<p>api地址是：<a href="https://jqueryvalidation.org/documentation/" target="_blank">https://jqueryvalidation.org/documentation/</a></p>
+					<p>github地址是：<a href="https://github.com/jquery-validation/jquery-validation" target="_blank">https://github.com/jquery-validation/jquery-validation</a></p>
+	            	<div class="page-header">
+						<h4>form 表单验证基本用法</h4>
+					</div>
+					<p>将校验规则写到控件中。</p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<form class="form-horizontal" style="max-width: 700px;" data-index="0">
+		                     	<div class="form-group">
+									<label for="text" class="col-sm-3 control-label">
+										用户名<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" required data-rule-minlength="6" data-rule-maxlength="20" name="userName" placeholder="请输入用户名">
+										<p class="help-block">请输入用户名.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-3 control-label">
+										密码<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" required data-rule-minlength="6" data-rule-maxlength="16" name="password" placeholder="请输入密码">
+										<p class="help-block">请输入密码.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-3 control-label">
+										确认密码<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" required data-rule-minlength="6" data-rule-maxlength="16" data-rule-equalTo="input[name='password']" name="repeat-password" placeholder="请输入密码">
+										<p class="help-block">请输入确认密码.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="text" class="col-sm-3 control-label">
+										邮编<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" required data-rule-isZipCode="true" name="zipCode" placeholder="请输入邮编">
+										<p class="help-block">请输入邮编.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="select" class="col-sm-3 control-label">
+										下拉列表<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<select class="form-control" required name="select">
+											<option value=""></option>
+			                                <option value="1">选项 1</option>
+			                                <option value="2">选项 2</option>
+			                                <option value="3">选项 3</option>
+			                                <option value="4">选项 4</option>
+			                            </select>
+										<p class="help-block">请选择选项.</p>
+									</div>
+								</div>
+								<div class="form-group" data-code="radio">
+									<label class="col-sm-3 control-label">
+										单选框<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<div data-validate-contents="true">
+											<label class="radio-inline">
+												<input type="radio" required name="radio" class="ace row-selector" value="0">
+												<span class="lbl padding-0"></span>
+												<span>选项一</span>
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="radio" class="ace row-selector" value="1">
+												<span class="lbl padding-0"></span>
+												<span>选项二</span>
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="radio" class="ace row-selector" value="2">
+												<span class="lbl padding-0"></span>
+												<span>选项三</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group" data-code="checkbox">
+									<label class="col-sm-3 control-label">
+										复选框<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<div data-validate-contents="true">
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" required data-rule-minlength="2" class="ace row-selector" value="0">
+												<span class="lbl padding-0"></span>
+												<span>选项一</span>
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" class="ace row-selector" value="1">
+												<span class="lbl padding-0"></span>
+												<span>选项二</span>
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" class="ace row-selector" value="2">
+												<span class="lbl padding-0"></span>
+												<span>选项三</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										备注<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" required name="remark" rows="3" placeholder="请填写内容"></textarea>
+									</div>
+								</div>
+								<div class="form-group" data-code="button">
+									<div class="col-sm-12 col-sm-offset-5">
+										<button type="button" class="btn btn-default">取消</button>
+										<button type="submit" class="btn btn-primary">保存</button>
+									</div>
+								</div>
+		                	</form>
+		            	</div>
+		            	<div class="meta" data-height="2750">
+		            		<div class="description">
+		            			<p>表单验证常用的属性required、data-rule-minlength、data-rule-maxlength、data-rule-isZipCode、data-rule-equalTo等常用属性，具体参看下面的配置。</p>
+		            			<p>对于radio、checkbox的验证方式设置第一个选项的属性就行了，但显示错误内容的位置可以通过设置属性<code>data-validate-contents='true'</code>。</p>
+		            			<p>js ajax数据请求设置abpServiceProxiesFun的属性方式来实现。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;form class=&quot;form-horizontal&quot; style=&quot;max-width: 700px;&quot; data-index=&quot;0&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;text&quot; class=&quot;col-sm-3 control-label&quot;&gt;
+			用户名&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; required data-rule-minlength=&quot;6&quot; data-rule-maxlength=&quot;20&quot; name=&quot;userName&quot; placeholder=&quot;请输入用户名&quot;&gt;
+			&lt;p class=&quot;help-block&quot;&gt;请输入用户名.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;password&quot; class=&quot;col-sm-3 control-label&quot;&gt;
+			密码&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;input type=&quot;password&quot; class=&quot;form-control&quot; required data-rule-minlength=&quot;6&quot; data-rule-maxlength=&quot;16&quot; name=&quot;password&quot; placeholder=&quot;请输入密码&quot;&gt;
+			&lt;p class=&quot;help-block&quot;&gt;请输入密码.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;password&quot; class=&quot;col-sm-3 control-label&quot;&gt;
+			确认密码&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;input type=&quot;password&quot; class=&quot;form-control&quot; required data-rule-minlength=&quot;6&quot; data-rule-maxlength=&quot;16&quot; data-rule-equalTo=&quot;input[name=&#x27;password&#x27;]&quot; name=&quot;repeat-password&quot; placeholder=&quot;请输入密码&quot;&gt;
+			&lt;p class=&quot;help-block&quot;&gt;请输入确认密码.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;text&quot; class=&quot;col-sm-3 control-label&quot;&gt;
+			邮编&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; required data-rule-isZipCode=&quot;true&quot; name=&quot;zipCode&quot; placeholder=&quot;请输入邮编&quot;&gt;
+			&lt;p class=&quot;help-block&quot;&gt;请输入邮编.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;select&quot; class=&quot;col-sm-3 control-label&quot;&gt;
+			下拉列表&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;select class=&quot;form-control&quot; required name=&quot;select&quot;&gt;
+				&lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;选项 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;选项 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;选项 3&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;选项 4&lt;/option&gt;
+      &lt;/select&gt;
+			&lt;p class=&quot;help-block&quot;&gt;请选择选项.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot; data-code=&quot;radio&quot;&gt;
+		&lt;label class=&quot;col-sm-3 control-label&quot;&gt;
+			单选框&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;div data-validate-contents=&quot;true&quot;&gt;
+				&lt;label class=&quot;radio-inline&quot;&gt;
+					&lt;input type=&quot;radio&quot; required name=&quot;radio&quot; class=&quot;ace row-selector&quot; value=&quot;0&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项一&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;radio-inline&quot;&gt;
+					&lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;ace row-selector&quot; value=&quot;1&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项二&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;radio-inline&quot;&gt;
+					&lt;input type=&quot;radio&quot; name=&quot;radio&quot; class=&quot;ace row-selector&quot; value=&quot;2&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项三&lt;/span&gt;
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot; data-code=&quot;checkbox&quot;&gt;
+		&lt;label class=&quot;col-sm-3 control-label&quot;&gt;
+			复选框&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;div data-validate-contents=&quot;true&quot;&gt;
+				&lt;label class=&quot;checkbox-inline&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; required data-rule-minlength=&quot;2&quot; class=&quot;ace row-selector&quot; value=&quot;0&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项一&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;checkbox-inline&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;ace row-selector&quot; value=&quot;1&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项二&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;checkbox-inline&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; class=&quot;ace row-selector&quot; value=&quot;2&quot;&gt;
+					&lt;span class=&quot;lbl padding-0&quot;&gt;&lt;/span&gt;
+					&lt;span&gt;选项三&lt;/span&gt;
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label class=&quot;col-sm-3 control-label&quot;&gt;
+			备注&lt;span class=&quot;asterisk&quot;&gt;*&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;div class=&quot;col-sm-9&quot;&gt;
+			&lt;textarea class=&quot;form-control&quot; required name=&quot;remark&quot; rows=&quot;3&quot; placeholder=&quot;请填写内容&quot;&gt;&lt;/textarea&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot; data-code=&quot;button&quot;&gt;
+		&lt;div class=&quot;col-sm-12 col-sm-offset-5&quot;&gt;
+			&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;取消&lt;/button&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;保存&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+&lt;script&gt;
+define([&quot;form-validate&quot;], function (formValidate) {
+	formValidate.validate(&quot;form[data-index=0]&quot;, {
+      abpServiceProxiesFun: site.api.order.form,
+      //如果需要在表单提交的时候对表单参数做一些处理可以使用此回调函数
+      handleSendData: function (data) {
+          return data;
+      },
+      success: function (data) {
+          site.toastr.success(&quot;操作成功！&quot;);
+      }
+  });
+});
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		            </div>
+		            <div class="page-header">
+						<h4>通过JS代码来写校验规则</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<form class="form-horizontal" style="max-width: 700px;" data-index="1">
+		                     	<div class="form-group">
+									<label for="text" class="col-sm-3 control-label">
+										用户名<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="userName" placeholder="请输入用户名">
+										<p class="help-block">请输入用户名.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-3 control-label">
+										密码<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" name="password" placeholder="请输入密码">
+										<p class="help-block">请输入密码.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-3 control-label">
+										确认密码<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" name="repeat-password" placeholder="请输入密码">
+										<p class="help-block">请输入确认密码.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="text" class="col-sm-3 control-label">
+										邮编<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="zipCode" placeholder="请输入邮编">
+										<p class="help-block">请输入邮编.</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="select" class="col-sm-3 control-label">
+										下拉列表<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<select class="form-control" name="select">
+											<option value=""></option>
+			                                <option value="1">选项 1</option>
+			                                <option value="2">选项 2</option>
+			                                <option value="3">选项 3</option>
+			                                <option value="4">选项 4</option>
+			                            </select>
+										<p class="help-block">请选择选项.</p>
+									</div>
+								</div>
+								<div class="form-group" data-code="radio">
+									<label class="col-sm-3 control-label">
+										单选框<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<div data-validate-contents="true">
+											<label class="radio-inline">
+												<input type="radio" name="radio" class="ace row-selector" value="0">
+												<span class="lbl padding-0"></span>
+												<span>选项一</span>
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="radio" class="ace row-selector" value="1">
+												<span class="lbl padding-0"></span>
+												<span>选项二</span>
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="radio" class="ace row-selector" value="2">
+												<span class="lbl padding-0"></span>
+												<span>选项三</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group" data-code="checkbox">
+									<label class="col-sm-3 control-label">
+										复选框<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<div data-validate-contents="true">
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" class="ace row-selector" value="0">
+												<span class="lbl padding-0"></span>
+												<span>选项一</span>
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" class="ace row-selector" value="1">
+												<span class="lbl padding-0"></span>
+												<span>选项二</span>
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" name="checkbox" class="ace row-selector" value="2">
+												<span class="lbl padding-0"></span>
+												<span>选项三</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label">
+										备注<span class="asterisk">*</span>
+									</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" name="remark" rows="3" placeholder="请填写内容"></textarea>
+									</div>
+								</div>
+								<div class="form-group" data-code="button">
+									<div class="col-sm-12 col-sm-offset-5">
+										<button type="button" class="btn btn-default">取消</button>
+										<button type="submit" class="btn btn-primary">保存</button>
+									</div>
+								</div>
+		                	</form>
+		            	</div>
+		            	<div class="meta" data-height="1375">
+		            		<div class="description">
+		            			<p>通过rules设置各个表单的验证规则，messages是表示表单验证的错误信息提示，如果某个控件没有 message，将调用默认的信息。</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">&lt;script&gt;
+define([&quot;form-validate&quot;], function (formValidate) {
+	formValidate.validate(&quot;form[data-index=1]&quot;, {
+		abpServiceProxiesFun: site.api.order.form,
+		success: function(data) {
+			site.toastr.success(&quot;操作成功！&quot;);
+		}
+	}, {
+		rules: {
+			&quot;userName&quot;: {
+				required: true,
+				minlength: 6,
+				maxlength: 20
+			},
+			&quot;password&quot;: {
+				required: true,
+				minlength: 6,
+				maxlength: 16
+			},
+			&quot;repeat-password&quot;: {
+				required: true,
+				equalTo: &quot;[name=password]&quot;
+			},
+			&quot;zipCode&quot;: {
+				required: true,
+				isZipCode: true
+			},
+			&quot;select&quot;: {
+				required: true
+			},
+			&quot;radio&quot;: {
+				required: true
+			},
+			&quot;checkbox&quot;: {
+				required: true,
+				minlength: 2
+			},
+			&quot;remark&quot;: {
+				required: true
+			}
+		},
+		messages: {
+			&quot;userName&quot;: {
+				required: &quot;请输入用户名&quot;,
+				minlength: &quot;用户名至少6个字符&quot;,
+				maxlength: &quot;用户名最多20个字符&quot;
+			},
+			&quot;password&quot;: {
+				required: &quot;请输入密码&quot;,
+				minlength: &quot;用户名至少6个字符&quot;,
+				maxlength: &quot;用户名最多16个字符&quot;
+			},
+			&quot;repeat-password&quot;: {
+				required: &quot;请输入确认密码!&quot;,
+				equalTo: &quot;两次密码输入不一致&quot;
+			},
+			&quot;zipCode&quot;: {
+				required: &quot;请输入邮编&quot;,
+				isZipCode: &quot;请输入正确的邮编格式！&quot;
+			}
+		}
+	});
+});
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>添加自定义校验</h4>
+					</div>
+					<div class="demo-block demo-box">
+		            	<div class="source">见代码</div>
+		            	<div class="meta" data-height="450">
+		            		<div class="description">
+		            			<p>通过addMethod(name,method,message)方法来添加除内置的 Validation 方法之外的验证方法。</p>
+		            			<p>参数 name 是添加的方法的名字。</p>
+		            			<p>参数 method 是一个函数，接收三个参数 (value,element,param) 。</p>
+		            			<p>value 是元素的值，element 是元素本身，param 是参数。</p>
+		            			<p></p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs javascript">&lt;script&gt;
+// 中文字两个字节
+$.validator.addMethod(&quot;byteRangeLength&quot;, function(value, element, param) {
+    var length = value.length;
+    for(var i = 0; i &lt; value.length; i++){
+        if(value.charCodeAt(i) &gt; 127){
+            length++;
+        }
+    }
+  return this.optional(element) || ( length &gt;= param[0] &amp;&amp; length &lt;= param[1] );   
+}, $.validator.format(&quot;请确保输入的值在{0}-{1}个字节之间(一个中文字算2个字节)&quot;));
+
+// 邮政编码验证   
+$.validator.addMethod(&quot;isZipCode&quot;, function(value, element) {   
+    var tel = /^[0-9]{6}$/;
+    return this.optional(element) || (tel.test(value));
+}, &quot;请正确填写您的邮政编码&quot;);
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
+		           	<div class="page-header">
+						<h4>Options</h4>
+					</div>
+					<p>下面是常用的表单验证常用配置参数，如果还需要更多请查看jquery.validate的官方文档。</p>
+					<table class="table table-bordered">
+						<thead>
+        					<tr>
+          						<th>序号</th>
+				          		<th>参数</th>
+				          		<th>说明</th>
+				          		<th>类型</th>
+				          		<th>可选值</th>
+				          		<th>默认值</th>
+				        	</tr>
+				      	</thead>
+				      	<tbody>
+				      		<tr>
+				      			<th scope="row">1</th>
+				      			<td>debug</td>
+				      			<td>进行调试模式</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">2</th>
+				      			<td>submitHandler</td>
+				      			<td>通过验证后运行的函数，里面要加上表单提交的函数，否则表单不会提交。</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">3</th>
+				      			<td>ignore</td>
+				      			<td>对某些元素不进行验证。</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>":hidden"</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">4</th>
+				      			<td>rules</td>
+				      			<td>自定义规则，key:value 的形式，key 是要验证的元素，value 可以是字符串或对象。</td>
+				      			<td>object</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">5</th>
+				      			<td>messages</td>
+				      			<td>自定义的提示信息，key:value 的形式，key 是要验证的元素，value 可以是字符串或函数。</td>
+				      			<td>object</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">6</th>
+				      			<td>groups</td>
+				      			<td>对一组元素的验证，用一个错误提示，用 errorPlacement 控制把出错信息放在哪里。</td>
+				      			<td>object</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">7</th>
+				      			<td>groups</td>
+				      			<td>对一组元素的验证，用一个错误提示，用 errorPlacement 控制把出错信息放在哪里。</td>
+				      			<td>object</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">8</th>
+				      			<td>OnSubmit</td>
+				      			<td>指定是否提交时验证。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">9</th>
+				      			<td>onfocusout</td>
+				      			<td>指定是否在获取焦点时验证。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">10</th>
+				      			<td>onkeyup</td>
+				      			<td>指定是否在敲击键盘时验证。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">11</th>
+				      			<td>onclick</td>
+				      			<td>指定是否在鼠标点击时验证（一般验证 checkbox、radiobox）。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">12</th>
+				      			<td>focusInvalid</td>
+				      			<td>提交表单后，未通过验证的表单（第一个或提交之前获得焦点的未通过验证的表单）会获得焦点。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>true</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">13</th>
+				      			<td>focusCleanup</td>
+				      			<td>当未通过验证的元素获得焦点时，移除错误提示（避免和 focusInvalid 一起使用）。</td>
+				      			<td>boolean</td>
+				      			<td>—</td>
+				      			<td>false</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">14</th>
+				      			<td>errorClass</td>
+				      			<td>指定错误提示的 css 类名，可以自定义错误提示的样式。</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>error</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">15</th>
+				      			<td>errorElement</td>
+				      			<td>指定使用什么标签标记错误。</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>label</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">16</th>
+				      			<td>wrapper</td>
+				      			<td>指定使用什么标签再把上边的 errorELement 包起来。</td>
+				      			<td>string</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">17</th>
+				      			<td>errorLabelContainer</td>
+				      			<td>把错误信息统一放在一个容器里面。</td>
+				      			<td>Selector(选择器)</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">18</th>
+				      			<td>showErrors</td>
+				      			<td>可以显示总共有多少个未通过验证的元素。</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">19</th>
+				      			<td>errorPlacement</td>
+				      			<td>可以自定义错误放到哪里。</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">20</th>
+				      			<td>success</td>
+				      			<td>要验证的元素通过验证后的动作，如果跟一个字符串，会当作一个 css 类，也可跟一个函数。</td>
+				      			<td>function|string</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      		<tr>
+				      			<th scope="row">21</th>
+				      			<td>highlight</td>
+				      			<td>可以给未通过验证的元素加效果、闪烁等。</td>
+				      			<td>function</td>
+				      			<td>—</td>
+				      			<td>—</td>
+				      		</tr>
+				      	</tbody>
+				   </table>
 	            </div>
 	        </div>
 	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
 	</body>
 </html>

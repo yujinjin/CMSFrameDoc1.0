@@ -10,11 +10,23 @@ define(function () {
         //用户
         return {
         	//登录用户
-            "login": site.config.contextPath + "/assets/js/data/login.json",
+            "login": function(ajaxOptions) {
+            	return site.ajax($.extend({
+		            url: site.config.contextPath + "/assets/js/data/login.json",
+		        }, ajaxOptions));
+            },
             //查询用户基本信息
-            "queryUserInfo": site.config.contextPath + "/assets/js/data/header.json",
+            "queryUserInfo": function(ajaxOptions) {
+            	return site.ajax($.extend({
+		            url: site.config.contextPath + "/assets/js/data/header.json"
+		        }, ajaxOptions));
+            },
             //查询用户菜单信息
-            "queryMenus": site.config.contextPath + "/assets/js/data/menu.json"
+            "queryMenus": function(ajaxOptions) {
+            	return site.ajax($.extend({
+		            url: site.config.contextPath + "/assets/js/data/menu.json"
+		        }, ajaxOptions));
+            }
         }
     } else {
         //前端调试模式

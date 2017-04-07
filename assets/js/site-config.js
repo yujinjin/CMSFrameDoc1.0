@@ -38,6 +38,17 @@ site.loadMenu = function (callbackFun) {
 
 // ajax请求 添加：handleSendData、successFunData、loading参数
 site.ajax = function (options) {
+    if ($.isFunction(options.abpServiceProxiesFun)) {
+        var _abpServiceProxiesFun = options.abpServiceProxiesFun, _inputParams = options.inputParams;
+        delete options.abpServiceProxiesFun;
+        if (typeof (options.inputParams) === "undefined") {
+            return _abpServiceProxiesFun(options);
+        } else {
+            delete options.inputParams;
+            _inputParams.push(options);
+            return _abpServiceProxiesFun.apply(null, _inputParams);
+        }
+    }
     var defaults = {
         type: "POST",
         dataType: "json",
@@ -46,6 +57,7 @@ site.ajax = function (options) {
         loading: true, //是否加载，可以是一个对象{blockUI: false}
         handleSendData: null, //是否处理发送参数
         successFunData: true, //是否验证成功数据
+        isJsonParmets: true, //是否序列化参数
         error: function (xhr, errorType, error) {
             if (xhr.responseJSON && xhr.responseJSON.__abp && xhr.responseJSON.error && xhr.responseJSON.error.message) {
                 if (xhr.responseJSON.error.validationErrors) {
@@ -78,7 +90,7 @@ site.ajax = function (options) {
         _options.data = JSON.stringify(_options.data);
     }
     _options.beforeSend = function (xhr) {
-        //xhr.setRequestHeader("TOKEN", site.globalService.getAntiForgeryToken());
+        //xhr.setRequestHeader("X-XSRF-TOKEN", site.globalService.getAntiForgeryToken());
         if ($.isFunction(options.beforeSend)) {
             options.beforeSend(xhr);
         }

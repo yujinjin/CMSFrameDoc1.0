@@ -9,8 +9,18 @@ define(function () {
         //前端调试模式
         //用户
         return {
-        	//登录用户
-            "queryOrderList": site.config.contextPath + "/assets/js/data/order.json"
+        	//查询订单列表
+            "queryOrderList": function(ajaxOptions) {
+            	return app.ajax($.extend({
+		            url: site.config.contextPath + "/assets/js/data/order.json"
+		        }, ajaxOptions));
+            },
+            
+            "form": function(ajaxOptions) {
+            	return site.ajax($.extend({
+		            url: site.config.contextPath + "/assets/js/data/form.json"
+		        }, ajaxOptions));
+            }
         }
     } else {
         //前端调试模式

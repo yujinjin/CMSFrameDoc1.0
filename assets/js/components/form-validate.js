@@ -118,6 +118,10 @@ define(["jquery.validate"], function () {
         //修改元素样式
         changeStyle: function (element, data, message) {
             var item = $(element);
+            //解决类似于radio、checkbox组件显示的错误信息提示区域
+            if($(element).closest("[data-validate-contents='true']").length > 0){
+            	item = $(element).closest("[data-validate-contents='true']");
+            }
             if (item.closest(".form-group").length > 0) {
                 var _form_group = item.closest(".form-group");
                 if (!_form_group.hasClass(data.formClass) && item.attr('type') !== 'hidden' && item.attr('data-flag') !== "false") {
@@ -127,18 +131,23 @@ define(["jquery.validate"], function () {
                 }
             }
             if (item.attr('type') !== 'hidden') {
-                item.attr("title", message);
-                item.tooltip({ container: 'body', placement: 'top', animation: false });
+                item.tooltip('destroy');
+                item.tooltip({ container: 'body', placement: 'bottom', animation: true, "title": message});
             } else if (item.closest("[data-tooltip='true']").length > 0) {
                 //如果隐藏域的表单有父标签特别注明需要引入提示插件就去在提示显示提示插件的地方显示
                 item = item.closest("[data-tooltip='true']");
                 item.attr("title", message);
-                item.tooltip({ container: 'body', placement: 'top', animation: false });
+                item.tooltip('destroy');
+                item.tooltip({ container: 'body', placement: 'bottom', animation: true });
             }
         },
 
         deleteStyle: function (element) {
             var item = $(element);
+            //解决类似于radio、checkbox组件显示的错误信息提示区域
+            if($(element).closest("[data-validate-contents='true']").length > 0){
+            	item = $(element).closest("[data-validate-contents='true']");
+            }
             var _tip_class = null;
             if (item.closest(".form-group").hasClass("has-error")) {
                 _tip_class = "has-error";

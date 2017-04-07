@@ -80,6 +80,7 @@
     max-height: none;
     border-radius: 0;
     background-color: #f9fafc;
+	white-space: pre;
 }
 
 .demo-block .highlight code.hljs:before {
