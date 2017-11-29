@@ -8,7 +8,7 @@ define(["highlight"], function (highlight) {
 		highlight.highlightBlock(block);
 	});
 	$(".demo-block-control").click(function(e){
-		if($(this).prev(".meta").height() > 0){
+		if(parseInt($(this).prev(".meta").height(), 10) != 0){
 			$(this).find("span").text("显示代码");
 			$(this).prev(".meta").height(0);
 		} else {

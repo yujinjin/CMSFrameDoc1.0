@@ -1,7 +1,8 @@
 .demo-block {
     border: 1px solid #eaeefb;
     border-radius: 4px;
-    transition: .2s
+    transition: .2s;
+    padding-bottom: 1px;
 }
 
 .demo-block:hover {

@@ -17,7 +17,7 @@ define(["jquery.ztree.all"], function () {
     }
     var siteZTree = function (data, $selector, setting) {
         var _defaults = $.extend(true, {}, defaults, setting || {});
-        this.zTree = $.fn.zTree.init($($selector || "#zTree"), _defaults, data);
+        this.zTree = $.fn.zTree.init($($selector || ".ztree"), _defaults, data);
         return this;
     }
 

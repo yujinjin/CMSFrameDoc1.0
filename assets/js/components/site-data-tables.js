@@ -428,7 +428,7 @@ define(["datatables.net-bs"], function () {
                 };
             });
         } else {
-            _this.table = $($selector || "table").DataTable(_options);
+            _this.table = $($selector || ".table").DataTable(_options);
             _this.options = _options;
             if ($.isFunction(_options.complete)) {
                 _options.complete();

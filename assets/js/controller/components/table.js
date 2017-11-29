@@ -146,7 +146,7 @@ define(["siteTable", "docs"], function (siteTable) {
 	        		}
 	        	},
         		customerAjax: {
-                    url: site.api.order.queryOrderList
+                    url: site.config.contextPath + "/assets/js/data/order.json"
                 }
         	}, $("table[data-index=8]"));
         }

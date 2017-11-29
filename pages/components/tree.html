@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="关键词" />
 	    <meta name="description" content="描述">
-		<title>Alert 警告提示</title>
+		<title>tree插件</title>
 		<link href="../../assets/content/bootstrap/bootstrap-3.3.7.css" rel="stylesheet" />
 		<link href="../../assets/content/bootstrap/font-awesome.css" rel="stylesheet" />
 		<link href="../../assets/css/beyond.css" rel="stylesheet" />
@@ -29,12 +29,57 @@
 	            <!-- Page Content -->
 	            <div class="page-content page-body">
 	            	<div class="page-header">
-						<h2>Message 全局提示</h2>
+						<h2>tree插件</h2>
 					</div>
 					<p class="lead">概述</p>
-					<p></p>
+					<p>zTree 是一个依靠 jQuery 实现的多功能 “树插件”。优异的性能、灵活的配置、多种功能的组合是 zTree 最大优点。</p>
+					<ul class="list-group">
+						<li class="list-group-item"> 1.采用了 延迟加载 技术，上万节点轻松加载，即使在 IE6 下也能基本做到秒杀</li>
+					  	<li class="list-group-item"> 2.兼容 IE、FireFox、Chrome、Opera、Safari 等浏览器</li>
+					  	<li class="list-group-item"> 3.支持 JSON 数据</li>
+					  	<li class="list-group-item"> 4.支持静态 和 Ajax 异步加载节点数据</li>
+					  	<li class="list-group-item"> 5.支持任意更换皮肤 / 自定义图标（依靠css）</li>
+					  	<li class="list-group-item"> 6.支持极其灵活的 checkbox 或 radio 选择功能</li>
+					  	<li class="list-group-item"> 7.提供多种事件响应回调</li>
+					  	<li class="list-group-item"> 8.灵活的编辑（增/删/改/查）功能，可随意拖拽节点，还可以多节点拖拽哟</li>
+					  	<li class="list-group-item"> 9.在一个页面内可同时生成多个 Tree 实例</li>
+					</ul>
+					<p>其官方地址是：<a href="http://www.treejs.cn/v3/api.php" target="_blank">http://www.treejs.cn/v3/api.php</a></p>
+					<p>github地址是：<a href="https://github.com/zTree/zTree_v3" target="_blank">https://github.com/zTree/zTree_v3</a></p>
+					<div class="demo-block demo-box">
+		            	<div class="source">
+		            		<ul id="zTree" class="ztree"></ul>
+		            	</div>
+		            	<div class="meta" data-height="320">
+		            		<div class="description">
+		            			<p>
+		            				需要引入"site-zTree"插件，默认情况下会自动初始化带<code>ztree</code>的样式。
+		            				</br>这里做了简单的封装，只提供zTree原生的tree属性和getCheckedNodesId(获取当前选中的节点ID列表)
+		            			</p>
+		            		</div>
+		            		<div class="highlight">
+		            			<pre>
+		            				<code class="hljs language-html">&lt;ul id=&quot;zTree&quot; class=&quot;ztree&quot;&gt;&lt;/ul&gt;
+&lt;script&gt;
+	define([&quot;site-zTree&quot;], function(siteZTree) {
+		site.ajax({
+			type: &quot;GET&quot;,
+			url: site.config.contextPath + &quot;/assets/js/data/tree.json&quot;
+		}).done(function(data) {
+			_this.tree = new siteZTree(data.result);
+		});
+	});
+&lt;/script&gt;</code>
+		            			</pre>
+		            		</div>
+		            	</div>
+		            	<div class="demo-block-control">
+		            		<i class="glyphicon glyphicon-chevron-down"></i><span>显示代码</span>
+		            	</div>
+		           	</div>
 	            </div>
 	        </div>
 	    </div>
+	    <script src="../../assets/Scripts/require-2.2.0.js" data-main="../../assets/js/site-config.js"></script>
 	</body>
 </html>
